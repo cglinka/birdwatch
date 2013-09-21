@@ -7,26 +7,26 @@ describe Chirp::Location  do
   describe ".initialize" do
     context "When no distance is inputed" do
       it 'sets latitude, longitude, and distance of 5' do
-        expect(loc.lat).to eq(-97.75)
-        expect(loc.long).to eq(30.25)
+        expect(loc.lat).to eq(30.25)
+        expect(loc.long).to eq(-97.75)
         expect(loc.dist).to eq(5)
       end
     end
     context "When distance is inputed" do
       it 'sets latitude, longitude and distance' do
         
-        expect(locdist.lat).to eq(-97.75)
-        expect(locdist.long).to eq(30.25)
+        expect(locdist.lat).to eq(30.25)
+        expect(locdist.long).to eq(-97.75)
         expect(locdist.dist).to eq(10)
       end
     end
   end
 
   describe "#mk_str" do
-    it "concatenates a string based on initialize" 
+    it "concatenates a string based on initialize" do
 
-      # expect(loc.mk_str).to eq("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-97.75&lat=30.25&dist=5&fmt=json")
-      # expect(locdist.mk_str).to eq("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-97.75&lat=30.25&dist=10&fmt=json")
-    
+      expect(loc.mk_str).to eq("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-97.75&lat=30.25&dist=5&fmt=json")
+      expect(locdist.mk_str).to eq("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-97.75&lat=30.25&dist=10&fmt=json")
+    end
   end
 end
