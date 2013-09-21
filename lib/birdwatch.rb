@@ -2,7 +2,7 @@ require 'json'
 require 'rest-client'
 require 'pry'
 require 'bundler/setup'
-require 'geocoder'
+
 
 module Chirp
   class Location

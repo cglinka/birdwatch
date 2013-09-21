@@ -9,7 +9,7 @@ get '/' do
     erb:index   
 end
 
-get '/birdlist'
+get '/birdlist' do
     @lat_lng = cookies[:lat_lng].split("|")
     @loc = Chirp::Location.new(@lat_lng)
     @url_str = @loc.mkstr

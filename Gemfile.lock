@@ -4,6 +4,7 @@ GEM
     backports (3.3.4)
     coderay (1.0.9)
     diff-lcs (1.2.4)
+    json (1.8.0)
     method_source (0.8.2)
     mime-types (1.25)
     multi_json (1.8.0)
@@ -44,7 +45,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  geocoder
   json
   pry
   rest-client
