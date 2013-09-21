@@ -12,6 +12,7 @@ describe Chirp::Location  do
         expect(loc.dist).to eq(5)
       end
     end
+    
     context "When distance is inputed" do
       it 'sets latitude, longitude and distance' do
         
