@@ -18,4 +18,20 @@ function setGeoCookie(position) {
   document.cookie = "lat_lng=" + escape(cookie_val);
 }
 
+//Bonnie 
 
+var listTemplateHTML = $("#templates", ".(div class here)");
+var listTemplate = _.template();
+
+var Birdlist = Backbone.View.extend ({
+	initilize: function (options){
+		this.list = options.list;
+	},
+
+	render: function (){
+		for (var i =0, i< this.list.length; i++){
+			var newListHTML = listTemplate(this.list[i]);
+			$(this.el).append(newListHTML);
+		}		
+	}
+}
