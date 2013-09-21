@@ -7,13 +7,14 @@ require 'geocoder'
 module Chirp
   class Location
     attr_reader :lat, :long, :dist
-    def initialize(lat, long, dist=5)
-      @lat = lat.round(2)
-      @long = long.round(2)
+    def initialize(lat_lng, dist=5)
+      @lat = lat_lng[0].round(2)
+      @long = lat_lng[1].round(2)
       @dist = dist
     end
 
     def mk_str
+      
 
     end
   end
