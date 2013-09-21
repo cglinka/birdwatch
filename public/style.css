@@ -1,0 +1,152 @@
+
+/*Animation Prefs*/
+@-webkit-keyframes pulse {
+      0% {background-color: #45CEEF;}
+     25% {background-color: #FFF5A5;}
+     50% {background-color: #FFD4DA;}
+     75% {background-color: #99D2E4;}
+     100% {background-color: #D8CAB4;}
+}
+
+body { 
+	background-color: #0AC5F4;
+	overflow: hidden;
+	}
+
+
+#circle1{
+	border-radius: 50%;
+	height:400px;
+	width: 400px;
+	background-color: white;
+	margin-top: -50%;
+	margin-left: -20%;
+	-webkit-animation: pulse 80s infinite alternate;
+
+}
+
+#btnInit {
+	background: #e3e3e3;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #0AC5F4;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  width: 150px; 
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+
+
+}
+#btnInit:hover {
+  background: white;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: gray;
+  cursor: pointer; }
+
+#btnInit:active {
+  background: white;
+  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+  box-shadow: inset 0 0 1px 1px #e3e3e3;
+  color: #000;
+}
+
+
+.container {
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	z-index: 10;
+}
+
+
+.container .hero-content .headline #lat {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Raleway', sans-serif;
+	color:white;
+}
+
+
+.container .hero-content .headline #long {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.container .hero-content .headline {
+	font-family: 'Vollkorn', impact;
+	font-size: 3em;
+	color: white;
+	border-color: white;
+	border-width: 1px;
+
+	border-radius: 10px;
+	width: 520px;
+
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	color: white;
+}
+
+
+.container .hero-content .locate{
+	font-size: 3em;
+	color: white;
+	border-color: white;
+	border-width: 1px;
+
+	border-radius: 10px;
+	width: 520px;
+
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	color: white;
+}
+
+
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	color:white;
+	text-align: center;
+}
+
+.locate-text {
+	font-family: 'Raleway', sans-serif;
+	color:white;
+	text-align: center;
+	font-size: .3em;
+
+}
+
+
+::selection {
+	background: white; /* Safari */
+	}
+::-moz-selection {
+	background: white; /* Firefox */
+}
+
+
+
+
