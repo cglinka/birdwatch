@@ -37,7 +37,9 @@ p {
 .all-search-results {
   background-image: url("butter980.gif");
   background-size:100%;
-  max-height: 660px;
+/*  max-height: 660px;*/
+  max-height: 500px;
+
   overflow: scroll;
 
 }
