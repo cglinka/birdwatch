@@ -3,67 +3,274 @@
 	<html lang="en">
 		<head>
 			<meta charset="utf-8" />
-			<title>Don't Panic. First Find Yourself.</title>
-			<link rel="stylesheet" href="style.css" />
-			<link href='http://fonts.googleapis.com/css?family=Vollkorn:700' rel='stylesheet' type='text/css'>
-			<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+			<title>chirpasana</title>
+  		<link rel="stylesheet" href="application.css">
+  		<link rel="stylesheet" href="foundation.css">
+  		<script src="js/vendor/custom.modernizr.js"></script>
+
 			<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
 			<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     	<script src="geo.js"></script>
-
-
-
-			<script>
-			// 	jQuery(window).ready(function(){
-			// 		jQuery("#btnInit").click(initiate_geolocation);
-			// 		// jQuery("#btnInit").click(initiate_geolocation);
-
-			// 	});
-			// 	function initiate_geolocation(){
-			// 		navigator.geolocation.getCurrentPosition(handle_geolocation_query);
-			// 	}
-
-			// 	function handle_geolocation_query(position){
-			// 		//console.log('Lat: ' + position.coords.latitude + ' ' +'Lon: ' + position.coords.longitude);
-			// 		document.getElementById("lat").innerHTML="<h2>latitude:  " + position.coords.latitude +"</h2>"
-			// 		document.getElementById("long").innerHTML="<h2>longitude:  " + position.coords.longitude +"</h2>"
-			// 	};
-			// </script>
-
-
-
 		</head>
 
 
-			<div class="container">
-				<div class="hero-content">
-					<div class="headline">Don't Panic!</div>
 
-						<div id="lat">
-							<h2> latitude:</h2>
-						</div>	
+		<body>
 
-						<div id="long">
-							<h2> longitude:</h2>
-						</div>		
+<!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
 
-					<div class="locate">
-						<button id="btnInit">find my coordinates</button>
-						<p class="locate-text">this can sometimes take a few seconds.</p>
+			<div class="contain-to-grid sticky">
+				<nav class="top-bar">
+				  <ul class="title-area">
+				    <!-- Title Area -->
+				    <li class="name">
+				      <h1><a href="#">Home</a></h1>
+				    </li>
+				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				  </ul>
+
+				  <section class="top-bar-section">
+				    <!-- Left Nav Section -->
+				    <ul class="left">
+				      <li class="divider"></li>
+				      <li class="active"><a href="#">Main Item 1</a></li>
+				      <li class="divider"></li>
+				      <li><a href="#">Main Item 2</a></li>
+				      <li class="divider"></li>
+				    </ul>
+
+				    <!-- Right Nav Section -->
+				    <ul class="right">
+				      <li class="divider hide-for-small"></li>
+				      <li class="has-dropdown"><a href="#">Main Item 4</a>
+
+				        <ul class="dropdown">
+				          <li><label>Dropdown Level 1 Label</label></li>
+				          <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
+
+				            <ul class="dropdown">
+				              <li><a href="#">Dropdown Level 2a</a></li>
+				              <li><a href="#">Dropdown Level 2b</a></li>
+				              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+				                <ul class="dropdown">
+				                  <li><a href="#">Dropdown Level 3a</a></li>
+				                  <li><a href="#">Dropdown Level 3b</a></li>
+				                  <li><a href="#">Dropdown Level 3c</a></li>
+				                </ul>
+				              </li>
+				              <li><a href="#">Dropdown Level 2d</a></li>
+				              <li><a href="#">Dropdown Level 2e</a></li>
+				              <li><a href="#">Dropdown Level 2f</a></li>
+				            </ul>
+				          </li>
+				          <li><a href="#">Dropdown Level 1b</a></li>
+				          <li><a href="#">Dropdown Level 1c</a></li>
+				          <li class="divider"></li>
+				          <li><label>Dropdown Level 1 Label</label></li>
+				          <li><a href="#">Dropdown Level 1d</a></li>
+				          <li><a href="#">Dropdown Level 1e</a></li>
+				          <li><a href="#">Dropdown Level 1f</a></li>
+				          <li class="divider"></li>
+				          <li><a href="#">See all &rarr;</a></li>
+				        </ul>
+				      </li>
+				      <li class="divider"></li>
+				      
+				      <li class="divider show-for-small"></li>
+
+				    </ul>
+				  </section>
+				</nav>
+			</div>
+
+
+
+			 <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - -  -->
+				<div class="row">
+					<div class="large-3 columns">
+						<h2>chirp chirp</h2>
+						<hr />
 					</div>
 
-					<div id="circle1"></div>
+					<div class="large-9 columns">
+						<h2>our main header image</h2>
+						<hr />
+					</div>
 				</div>
-			</div>
-		
-	
+
+			<!-- - - - - - - - - - - - - - - ROW 2 Lat Long Bar Row - - - - - - - - -->
+
+				<div class="row">
+					<div class="locate-me-now">
+						<div class="large-2 columns">
+							<a href="#" class="small button">find my position</a>
+						</div>
+
+						<div class="large-1 columns"><!-- empty spacer column -->	</div>
+
+
+
+						<div class="large-9 columns"> <!-- Nested columns for lat + long -->
+							<div class="lat-long-container">
+
+								<div class="large-3 columns">
+									<div class="latitude-text">
+										<h4>latitude: </h4>
+									</div>
+								</div>
+
+								<div class="large-3 columns">
+									<div class="latitude-calc">
+										<h4>121.33822</h4>
+									</div>					
+								</div>
+
+								<div class="large-3 columns">
+									<div class="longitude-text">
+										<h4>longitude: </h4>
+									</div>
+								</div>
+
+								<div class="large-3 columns">
+									<div class="longitude-calc">
+										<h4>-34.82383</h4>
+									</div>
+								</div>
+
+							</div>
+						</div>	
+					</div>
+				</div>
 
 
 
 
+			<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->
+
+				<div class="row">
+					<div class="search-results">
+						
+						<div class="large-3 columns">
+							<div class="search-image">
+								<img src="http://static.environmentalgraffiti.com/sites/default/files/images/keel-billed-toucan.img_assist_custom-600x450.jpg">
+							</div>
+						</div>
+
+						<div class="large-9 columns">
+							<section id="bird-description">
+								<article class="slide">
+					        <p>Salvia portland leggings banh mi fanny pack mixtape, authentic bushwick wes anderson intelligentsia artisan typewriter high life they sold out mixtape high life. Marfa ethnic wayfarers brooklyn keytar mixtape. Blue bottle shoreditch gluten-free, mixtape hoodie whatever pinterest viral twee fashion axe high life irony biodiesel tofu.</p>
+
+					        <p>Retro church-key thundercats keytar, skateboard irony selvage ethnic freegan banjo pour-over fixie. Raw denim fashion ax eoke locavore disrupt, tonx retro authentic letterpress raw denim stumptown mixtape ugh kale chips flexitarian 90's deep v. Squid fingerstache bespoke wolf DIY. Banjo pour-over shoreditch cardigan try-hard.</p>
+
+					        <p>Skateboard artisan bicycle rights next level vinyl cardigan beard twee, farm-to-table truffaut. Shoreditch freegan cliche thundercats, bushwick VHS intelligentsia selfies ethnic try-hard before they sold out. Marfa terry richardson hella, seitan odd future pug butcher. Wes anderson tousled YOLO cardigan. Typewriter high life carles, artisan gentrify messenger bag single-origin coffee truffaut thundercats cray 90's pour-over seitan. Banksy 8-bit organic, salvia gentrify stumptown wayfarers. Godard echo park before they sold out chambray, skateboard twee mcsweeney's synth hella.</p>
+
+					        <p>Flannel pinterest Austin twee narwhal, hoodie swag wolf photo booth. Hella kale chips marfa occupy pitchfork put a bird on it. Semiotics dreamcatcher selfies beard DIY umami craft beer 3 wolf moon. Try-hard literally mustache polaroid ennui VHS. High life fixie wolf, trust fund twee seitan pinterest blog helvetica sriracha. Tattooed selvage try-hard, biodiesel banjo direct trade echo park kogi tonx bespoke. Pork belly put a bird on it iphone, fixie literally bespoke tonx butcher +1 swag.</p>
+								</article>							  
+							</section>
+						</div>
+					</div>
+				</div>
+
+
+
+			<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->
+				
+
+				<div class="row">
+					<div class="search-results">
+						
+						<div class="large-3 columns">
+							<div class="search-image">
+								<img src="http://static.environmentalgraffiti.com/sites/default/files/images/Rainbow-Lorikeet-.preview.jpg">
+							</div>
+						</div>
+
+						<div class="large-9 columns">
+							<section id="bird-description">
+								<article class="slide">
+					        <p>Salvia portland leggings banh mi fanny pack mixtape, authentic bushwick wes anderson intelligentsia artisan typewriter high life they sold out mixtape high life. Marfa ethnic wayfarers brooklyn keytar mixtape. Blue bottle shoreditch gluten-free, mixtape hoodie whatever pinterest viral twee fashion axe high life irony biodiesel tofu.</p>
+
+					        <p>Retro church-key thundercats keytar, skateboard irony selvage ethnic freegan banjo pour-over fixie. Raw denim fashion ax eoke locavore disrupt, tonx retro authentic letterpress raw denim stumptown mixtape ugh kale chips flexitarian 90's deep v. Squid fingerstache bespoke wolf DIY. Banjo pour-over shoreditch cardigan try-hard.</p>
+
+					        <p>Skateboard artisan bicycle rights next level vinyl cardigan beard twee, farm-to-table truffaut. Shoreditch freegan cliche thundercats, bushwick VHS intelligentsia selfies ethnic try-hard before they sold out. Marfa terry richardson hella, seitan odd future pug butcher. Wes anderson tousled YOLO cardigan. Typewriter high life carles, artisan gentrify messenger bag single-origin coffee truffaut thundercats cray 90's pour-over seitan. Banksy 8-bit organic, salvia gentrify stumptown wayfarers. Godard echo park before they sold out chambray, skateboard twee mcsweeney's synth hella.</p>
+
+					        <p>Flannel pinterest Austin twee narwhal, hoodie swag wolf photo booth. Hella kale chips marfa occupy pitchfork put a bird on it. Semiotics dreamcatcher selfies beard DIY umami craft beer 3 wolf moon. Try-hard literally mustache polaroid ennui VHS. High life fixie wolf, trust fund twee seitan pinterest blog helvetica sriracha. Tattooed selvage try-hard, biodiesel banjo direct trade echo park kogi tonx bespoke. Pork belly put a bird on it iphone, fixie literally bespoke tonx butcher +1 swag.</p>
+								</article>							  
+							</section>
+						</div>
+					</div>
+				</div>
+
+
+			<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - -  -->
+
+				<div class="row">
+					<div class="footer">
+
+						<div class="large-12 columns">
+						</div>
+
+
+				
+					</div>
+				</div>
+
+			<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - - - - - -  -->
+
+
+
+			  <script>
+			  document.write('<script src=' +
+			  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+			  '.js><\/script>')
+			  </script>
+			  
+			  <script src="js/foundation.min.js"></script>
+			  <!--
+			  
+			  <script src="js/foundation/foundation.js"></script>
+			  
+			  <script src="js/foundation/foundation.alerts.js"></script>
+			  
+			  <script src="js/foundation/foundation.clearing.js"></script>
+			  
+			  <script src="js/foundation/foundation.cookie.js"></script>
+			  
+			  <script src="js/foundation/foundation.dropdown.js"></script>
+			  
+			  <script src="js/foundation/foundation.forms.js"></script>
+			  
+			  <script src="js/foundation/foundation.joyride.js"></script>
+			  
+			  <script src="js/foundation/foundation.magellan.js"></script>
+			  
+			  <script src="js/foundation/foundation.orbit.js"></script>
+			  
+			  <script src="js/foundation/foundation.reveal.js"></script>
+			  
+			  <script src="js/foundation/foundation.section.js"></script>
+			  
+			  <script src="js/foundation/foundation.tooltips.js"></script>
+			  
+			  <script src="js/foundation/foundation.topbar.js"></script>
+			  
+			  <script src="js/foundation/foundation.interchange.js"></script>
+			  
+			  <script src="js/foundation/foundation.placeholder.js"></script>
+			  
+			  <script src="js/foundation/foundation.abide.js"></script>
+			  
+			  -->
+			  <script>$(document).foundation();</script>	
+			  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+			  <script src="readmore.js"></script>
+			  <script>$('article').readmore({maxHeight: 170});</script>
 
 
 		</body>
