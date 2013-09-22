@@ -16,137 +16,19 @@
     	<script src="geo.js"></script>
 		</head>
 
+		</head>
 
+			<div class="container">
+				<div class="hero-content">
+					<div class="headline">Don't Panic!</div>
 
-		<body>
-
-<!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
-
-			<div class="contain-to-grid sticky">
-				<nav class="top-bar">
-				  <ul class="title-area">
-				    <!-- Title Area -->
-				    <li class="name">
-				      <h1><a href="#">Home</a></h1>
-				    </li>
-				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-				  </ul>
-
-				  <section class="top-bar-section">
-				    <!-- Left Nav Section -->
-				    <ul class="left">
-				      <li class="divider"></li>
-				      <li class="active"><a href="#">Main Item 1</a></li>
-				      <li class="divider"></li>
-				      <li><a href="#">Main Item 2</a></li>
-				      <li class="divider"></li>
-				    </ul>
-
-				    <!-- Right Nav Section -->
-				    <ul class="right">
-				      <li class="divider hide-for-small"></li>
-				      <li class="has-dropdown"><a href="#">Main Item 4</a>
-
-				        <ul class="dropdown">
-				          <li><label>Dropdown Level 1 Label</label></li>
-				          <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
-
-				            <ul class="dropdown">
-				              <li><a href="#">Dropdown Level 2a</a></li>
-				              <li><a href="#">Dropdown Level 2b</a></li>
-				              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
-
-				                <ul class="dropdown">
-				                  <li><a href="#">Dropdown Level 3a</a></li>
-				                  <li><a href="#">Dropdown Level 3b</a></li>
-				                  <li><a href="#">Dropdown Level 3c</a></li>
-				                </ul>
-				              </li>
-				              <li><a href="#">Dropdown Level 2d</a></li>
-				              <li><a href="#">Dropdown Level 2e</a></li>
-				              <li><a href="#">Dropdown Level 2f</a></li>
-				            </ul>
-				          </li>
-				          <li><a href="#">Dropdown Level 1b</a></li>
-				          <li><a href="#">Dropdown Level 1c</a></li>
-				          <li class="divider"></li>
-				          <li><label>Dropdown Level 1 Label</label></li>
-				          <li><a href="#">Dropdown Level 1d</a></li>
-				          <li><a href="#">Dropdown Level 1e</a></li>
-				          <li><a href="#">Dropdown Level 1f</a></li>
-				          <li class="divider"></li>
-				          <li><a href="#">See all &rarr;</a></li>
-				        </ul>
-				      </li>
-				      <li class="divider"></li>
-				      
-				      <li class="divider show-for-small"></li>
-
-				    </ul>
-				  </section>
-				</nav>
-			</div>
-
-
-
-			 <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - -  -->
-				<div class="row">
-					<div class="large-3 columns">
-						<h2>chirp chirp</h2>
-						<hr />
-					</div>
-
-					<div class="large-9 columns">
-						<h2>our main header image</h2>
-						<hr />
-					</div>
-				</div>
-
-			<!-- - - - - - - - - - - - - - - ROW 2 Lat Long Bar Row - - - - - - - - -->
-
-				<div class="row">
-					<div class="locate-me-now">
-						<div class="large-2 columns">
-							<a href="#" class="small button">find my position</a>
+						<div id="lat">
+							<h2> latitude:</h2>
 						</div>
 
-						<div class="large-1 columns"><!-- empty spacer column -->	</div>
-
-
-
-						<div class="large-9 columns"> <!-- Nested columns for lat + long -->
-							<div class="lat-long-container">
-
-								<div class="large-3 columns">
-									<div class="latitude-text">
-										<h4>latitude: </h4>
-									</div>
-								</div>
-
-								<div class="large-3 columns">
-									<div class="latitude-calc">
-										<h4>121.33822</h4>
-									</div>					
-								</div>
-
-								<div class="large-3 columns">
-									<div class="longitude-text">
-										<h4>longitude: </h4>
-									</div>
-								</div>
-
-								<div class="large-3 columns">
-									<div class="longitude-calc">
-										<h4>-34.82383</h4>
-									</div>
-								</div>
-
-							</div>
-						</div>	
-					</div>
-				</div>
-
+						<div id="long">
+							<h2> longitude:</h2>
+						</div>
 
 
 
@@ -206,72 +88,7 @@
 						</div>
 					</div>
 				</div>
-
-
-			<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - -  -->
-
-				<div class="row">
-					<div class="footer">
-
-						<div class="large-12 columns">
-						</div>
-
-
-				
-					</div>
-				</div>
-
-			<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - - - - - -  -->
-
-
-
-			  <script>
-			  document.write('<script src=' +
-			  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-			  '.js><\/script>')
-			  </script>
-			  
-			  <script src="js/foundation.min.js"></script>
-			  <!--
-			  
-			  <script src="js/foundation/foundation.js"></script>
-			  
-			  <script src="js/foundation/foundation.alerts.js"></script>
-			  
-			  <script src="js/foundation/foundation.clearing.js"></script>
-			  
-			  <script src="js/foundation/foundation.cookie.js"></script>
-			  
-			  <script src="js/foundation/foundation.dropdown.js"></script>
-			  
-			  <script src="js/foundation/foundation.forms.js"></script>
-			  
-			  <script src="js/foundation/foundation.joyride.js"></script>
-			  
-			  <script src="js/foundation/foundation.magellan.js"></script>
-			  
-			  <script src="js/foundation/foundation.orbit.js"></script>
-			  
-			  <script src="js/foundation/foundation.reveal.js"></script>
-			  
-			  <script src="js/foundation/foundation.section.js"></script>
-			  
-			  <script src="js/foundation/foundation.tooltips.js"></script>
-			  
-			  <script src="js/foundation/foundation.topbar.js"></script>
-			  
-			  <script src="js/foundation/foundation.interchange.js"></script>
-			  
-			  <script src="js/foundation/foundation.placeholder.js"></script>
-			  
-			  <script src="js/foundation/foundation.abide.js"></script>
-			  
-			  -->
-			  <script>$(document).foundation();</script>	
-			  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-			  <script src="readmore.js"></script>
-			  <script>$('article').readmore({maxHeight: 170});</script>
-
+			</div>
 
 		</body>
 	</html>
