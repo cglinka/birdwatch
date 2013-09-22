@@ -10,7 +10,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
+  background: black; /*Nik: updated to black. could not override in application.css*/
   color: #222222;
   padding: 0;
   margin: 0;
