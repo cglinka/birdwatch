@@ -9,6 +9,7 @@ require 'flickraw'
 module Chirp
   class Location
     attr_reader :lat, :long, :dist
+    attr_accessor :template
 
     def initialize(lat_lng, dist=5)
       @long = lat_lng[0].round(2)
@@ -33,8 +34,7 @@ module Chirp
     end
   end
 
-
-  class Picture
+  class Content
     # List is an Array of Hashes
     #
     # EX: [ {'comName' => 'Sparrow', 'sciName' => 'Sparrowus Thingify'}, {'comName' => 'Common Name',
@@ -82,16 +82,22 @@ module Chirp
     #
     # Returns an Array of image URLs
     def picture_array
+      @sci_name_list = scientific_name_list
       @sci_name_list.each do |bird|
         get_picture(bird)
         @pic_array << url
       end
+      return @pic_array
     end
 
-    # Combines the image URLs with the template array from Chirp::Location
+    # Combines the image URLs with the @list Array from birdmain.rb
     #
     def add_to_template
-      
+      @pic_urls = picture_array
+      @list.each_with_index do |bird, index|
+        bird = { 'img_url' => pic_urls[index] }
+      end
+      return @list
     end
   end
 end

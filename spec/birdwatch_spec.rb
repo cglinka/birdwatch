@@ -31,7 +31,8 @@ describe Chirp::Location  do
     end
   end
 
-  describe "#get_loc" do #get_list?
+# Not actually testing anything right now
+  describe "#get_list" do
     it "returns an array of objects " do
       list=double("list")
 
@@ -39,24 +40,45 @@ describe Chirp::Location  do
         {"comName"=>"Baltimore Oriole", "sciName"=>"Icterus galbula"},
         {"comName"=>"Yellow-bellied Flycatcher", "sciName"=>"Empidonax flaviventris"},
         {"comName"=>"Common Nighthawk", "sciName"=>"Chordeiles minor"}])
+
+      expect().to receive().and_return()
+      expect().to receive().and_return()
     end
   end
 end
 
-describe Chirp::Picture do
+describe Chirp::Content do
+  let(:list) {[
+        {"comName"=>"Baltimore Oriole", "sciName"=>"Icterus galbula"},
+        {"comName"=>"Yellow-bellied Flycatcher", "sciName"=>"Empidonax flaviventris"},
+        {"comName"=>"Common Nighthawk", "sciName"=>"Chordeiles minor"}
+  ]}
+  let(:testobj) {Chirp::Content.new(list)}
 
   describe ".initialize" do
 
   end
 
   describe "#get_picture" do
-    it "takes a scientific name and returns an image URL via Flickr." do
-      name = "Chordeiles minor"
-      picture = '{ "photos": { "page": 1, "pages": "533", "perpage": 1, "total": "533", 
-    "photo": [ { "id": "503934066", "owner": "10458155@N00", "secret": "bfbcb366c9", "server": "222", "farm": 1, "title": "Eastern Wood-Pewee", "ispublic": 1, "isfriend": 0, "isfamily": 0, "url_q": "http:\/\/farm1.staticflickr.com\/222\/503934066_bfbcb366c9_q.jpg", "height_q": "150", "width_q": "150" }
-    ] }, "stat": "ok" }'
+    it "takes a scientific name and returns an image URL." do
+      picture = '{ "photos": 
+        { "page": 1, "pages": "759", "perpage": 1, "total": "759", "photo": [
+            { "id": "3656997399", 
+              "owner": "70619288@N00", 
+              "secret": "33e1012137", 
+              "server": "3582", 
+              "farm": 4, 
+              "title": "Finding Your Inner Peace", 
+              "ispublic": 1, 
+              "isfriend": 0, 
+              "isfamily": 0, 
+              "url_q": "http:\/\/farm4.staticflickr.com\/3582\/3656997399_33e1012137_q.jpg", 
+              "height_q": "150", 
+              "width_q": "150" }
+        ] }, 
+        "stat": "ok" }'
 
-      
+      expect(testobj.get_picture('Chordeiles minor')).to eq("http:\/\/farm4.staticflickr.com\/3582\/3656997399_33e1012137_q.jpg")
     end
   end
 
