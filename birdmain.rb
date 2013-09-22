@@ -18,6 +18,6 @@ get '/birdlist' do
     @long =@loc.long
     @birds_json = @loc.get_list()
     @birds_json = @birds_json.map { |o| Hash[o.each_pair.to_a] }.to_json
-    erb:index
+    erb:birdlist
 
 end
