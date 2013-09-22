@@ -32,7 +32,7 @@ var Birdlist = Backbone.View.extend({
 
 			var newListHTML = listTemplate(this.options.list[i]);
 			$(this.el).append(newListHTML);
-		}		
+		}
 	}
 });
 
@@ -41,7 +41,7 @@ $('#locate-butt').on('click', function(e){
   initiate_geolocation();
 });
 
-//var blist = new Birdlist(window.birds_json)
+// var blist = new Birdlist(window.birds_json)
 
 var testList =[
     {
