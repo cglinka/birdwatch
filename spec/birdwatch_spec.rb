@@ -31,7 +31,7 @@ describe Chirp::Location  do
     end
   end
 
-  describe "#get_loc" do
+  describe "#get_loc" do #get_list?
     it "returns an array of objects " do
       list=double("list")
 
@@ -43,10 +43,8 @@ describe Chirp::Location  do
   end
 end
 
-end
-
 describe Chirp::Picture do
-  let (:picture)
+  #let (:picture)
 
   describe ".initialize"
 

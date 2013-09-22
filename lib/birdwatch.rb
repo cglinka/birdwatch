@@ -9,21 +9,23 @@ require 'flickraw'
 module Chirp
   class Location
     attr_reader :lat, :long, :dist
+
     def initialize(lat_lng, dist=5)
       @long = lat_lng[0].round(2)
       @lat = lat_lng[1].round(2)
       @dist = dist
     end
+
     def get_list
       @url_str = mk_str
       @list = RestClient.get(@url_str, {:accept => :json})
       @list = JSON.parse(@list)
-      template= []
+      @template= []
       @list.each do |bird|
         @birdie ={"comName"=> bird["comName"], "sciName"=> bird["sciName"]}
-        template << @birdie
+        @template << @birdie
       end
-      template
+      @template
     end
 
     def mk_str
@@ -46,30 +48,42 @@ module Chirp
     # Returns an Array of Hashes
     def scientific_name_list
       @list.each do |bird|
-        @sci_name_list << bird["sciName"]
+        sci_name = bird["sciName"]
+        @sci_name_list << sci_name
       end
+      return @sci_name_list
     end
 
+    # Flickr search: take scientific name and search flickr
+    #
+    # Returns URL of most interesting image that is associated with text that matches the scientific name.
     def get_picture(name)
       FlickRaw.api_key = ENV['API_KEY']
       FlickRaw.shared_secret = ENV['SHARED_SECRET']
 
-      picture = flickr.photos.search {
+      picture = flickr.photos.search(
         :text => name,
-        :sort => interestingness-desc,
+        :sort => 'interestingness-desc',
         :safe_search => 1,
-        :format => json,
+        :format => 'json',
         :nojsoncallback => 1,
-        :per_page => 1
-      }
+        :per_page => 1,
+        :extras => 'url_q'
+      )
 
       jpic = JSON.parse(picture)
-
-      info = flickr.photos.getInfo(:photo_id => a)
-      url = FlickRaw.url_b(info)
+      a = jpic["photos"]["photo"][0]["url_q"]
+      # info = flickr.photos.getInfo(:photo_id => a)
+      # manual_url = 
+      # url = FlickRaw.url_b(info)
       return url
     end
 
+    # Puts the picture URL's into an array
+    #
+    # Takes the Array of scientific names and runs the Flickr image search
+    #
+    # Returns an Array of image URLs
     def picture_array
       @sci_name_list.each do |bird|
         get_picture(bird)
@@ -77,8 +91,10 @@ module Chirp
       end
     end
 
+    # Combines the image URLs with the template array from Chirp::Location
+    #
     def add_to_template
       
     end
-
+  end
 end
