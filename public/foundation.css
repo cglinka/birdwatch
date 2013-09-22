@@ -10,11 +10,11 @@ body {
   font-size: 100%; }
 
 body {
-  background: black; /*Nik: updated to black. could not override in application.css*/
+  background: white; 
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -73,8 +73,11 @@ img {
   -webkit-font-smoothing: antialiased; }
 
 img {
-  display: inline-block;
-  vertical-align: middle; }
+  /*display: inline-block;*/
+  vertical-align: middle; 
+  
+
+}
 
 textarea {
   height: auto;
@@ -1061,8 +1064,9 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
+  font-family:'Raleway', sans-serif;
+  /*font-weight: bold;*/
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
@@ -1311,7 +1315,9 @@ button, .button {
   font-family: inherit;
   font-weight: bold;
   line-height: 1;
-  margin: 0 0 1.25em;
+ /* - - - CUSTOM OVERRIDE - - - */
+  margin: 0 0 0 0 ;
+/*  - - - - - - - - - - */
   position: relative;
   text-decoration: none;
   text-align: center;

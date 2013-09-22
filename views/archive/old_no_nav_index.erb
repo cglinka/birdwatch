@@ -6,9 +6,6 @@
 			<title>chirpasana</title>
   		<link rel="stylesheet" href="application.css">
   		<link rel="stylesheet" href="foundation.css">
-  		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-  		<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-
   		<script src="js/vendor/custom.modernizr.js"></script>
 
 			<!--[if IE]>
@@ -27,13 +24,77 @@
 		<body>
 
 <!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
-<!-- 										         PENDING 																 -->
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+			<div class="contain-to-grid sticky">
+				<nav class="top-bar">
+				  <ul class="title-area">
+				    <!-- Title Area -->
+				    <li class="name">
+				      <h1><a href="#">Home</a></h1>
+				    </li>
+				    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				  </ul>
+
+				  <section class="top-bar-section">
+				    <!-- Left Nav Section -->
+				    <ul class="left">
+				      <li class="divider"></li>
+				      <li class="active"><a href="#">Main Item 1</a></li>
+				      <li class="divider"></li>
+				      <li><a href="#">Main Item 2</a></li>
+				      <li class="divider"></li>
+				    </ul>
+
+				    <!-- Right Nav Section -->
+				    <ul class="right">
+				      <li class="divider hide-for-small"></li>
+				      <li class="has-dropdown"><a href="#">Main Item 4</a>
+
+				        <ul class="dropdown">
+				          <li><label>Dropdown Level 1 Label</label></li>
+				          <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
+
+				            <ul class="dropdown">
+				              <li><a href="#">Dropdown Level 2a</a></li>
+				              <li><a href="#">Dropdown Level 2b</a></li>
+				              <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+				                <ul class="dropdown">
+				                  <li><a href="#">Dropdown Level 3a</a></li>
+				                  <li><a href="#">Dropdown Level 3b</a></li>
+				                  <li><a href="#">Dropdown Level 3c</a></li>
+				                </ul>
+				              </li>
+				              <li><a href="#">Dropdown Level 2d</a></li>
+				              <li><a href="#">Dropdown Level 2e</a></li>
+				              <li><a href="#">Dropdown Level 2f</a></li>
+				            </ul>
+				          </li>
+				          <li><a href="#">Dropdown Level 1b</a></li>
+				          <li><a href="#">Dropdown Level 1c</a></li>
+				          <li class="divider"></li>
+				          <li><label>Dropdown Level 1 Label</label></li>
+				          <li><a href="#">Dropdown Level 1d</a></li>
+				          <li><a href="#">Dropdown Level 1e</a></li>
+				          <li><a href="#">Dropdown Level 1f</a></li>
+				          <li class="divider"></li>
+				          <li><a href="#">See all &rarr;</a></li>
+				        </ul>
+				      </li>
+				      <li class="divider"></li>
+				      
+				      <li class="divider show-for-small"></li>
+
+				    </ul>
+				  </section>
+				</nav>
+			</div>
 
 
 
-<!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
-			<div class="brand-bar">
+
+			 <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - -  -->
 				<div class="row">
 					<div class="large-3 columns">
 						<h2>chirp chirp</h2>
@@ -45,78 +106,63 @@
 						<hr />
 					</div>
 				</div>
-			</div>
 
+			<!-- - - - - - - - - - - - - - - ROW 2 Lat Long Bar Row - - - - - - - - -->
 
-
-
-
-		<!-- - - - - - - - - - search me button - - - - - - - - -->
-
-			<div class="row">
-				<div class="large-12 columns">
-					<div class="locate-me">
-						<a href="#" class="large button">press me to get started</a>
-					</div>
-				</div>				
-			</div>
-
-		<!-- - - - - - - Lat & Long - - - - - - - - -->
-
-			<div class="row">
-
-				
-				<!-- Nested columns for lat + long -->
-				<div class="large-12 columns"> 
-					<div class="lat-long-container">
-
-						<!-- - - - - - latitude - - - - - - -->		
-						<div class="large-6 columns">
-							<div class="latitude">
-								<div class="latitude-text">
-									<h4>latitude: </h4>
-								</div>
-
-								<div class="latitude-calc">
-									<h4>121.33822</h4>
-								</div>	
-
-							</div>				
+				<div class="row">
+					<div class="locate-me-now">
+						<div class="large-2 columns">
+							<a href="#" class="small button">find my position</a>
 						</div>
 
-						<!-- - - - - - longitude - - - - - - -->		
-						<div class="large-6 columns">
-							<div class="longitude">
-								<div class="longitude-text">
-									<h4>longitude: </h4>
+						<div class="large-1 columns"><!-- empty spacer column -->	</div>
+
+
+
+						<div class="large-9 columns"> <!-- Nested columns for lat + long -->
+							<div class="lat-long-container">
+
+								<div class="large-3 columns">
+									<div class="latitude-text">
+										<h4>latitude: </h4>
+									</div>
 								</div>
 
-								<div class="longitude-calc">
-									<h4>121.33822</h4>
-								</div>	
-							</div>				
+								<div class="large-3 columns">
+									<div class="latitude-calc">
+										<h4>121.33822</h4>
+									</div>					
+								</div>
+
+								<div class="large-3 columns">
+									<div class="longitude-text">
+										<h4>longitude: </h4>
+									</div>
+								</div>
+
+								<div class="large-3 columns">
+									<div class="longitude-calc">
+										<h4>-34.82383</h4>
+									</div>
+								</div>
+
+							</div>
 						</div>	
-
-					</div> <!-- - class lat long container -->
-				</div>	<!-- - close large 9 columns -->
-			</div>
+					</div>
+				</div>
 
 
 
 
-<!-- - - - - - - - - - - - - - - Search Result Container - - - - - - - - - - - - - - - - - - - - - - -  -->
-			<div class="all-search-results">
-		
+			<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->
 
-		<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->	
 				<div class="row">
-					<div class="single-search-results">
+					<div class="search-results">
+						
 						<div class="large-3 columns">
-
 							<div class="search-image">
 								<img src="http://static.environmentalgraffiti.com/sites/default/files/images/keel-billed-toucan.img_assist_custom-600x450.jpg">
 							</div>
-							
 						</div>
 
 						<div class="large-9 columns">
@@ -153,10 +199,8 @@
 
 
 
-
-		<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->
-
-
+			<!-- - - - - - - - - - - - - - - Search Result Div (template example)- - - - - - - - - - - - - - -  -->
+				
 				<div class="row">
 					<div class="search-results">
 						
@@ -196,77 +240,78 @@
 							</section>
 						</div>
 					</div>
-				</div>				
-<!-- - - - - - - - - - - - - - - Close Search Result Container - - - - - - - - - - - - - - - - - - - - - - -  -->
-			</div>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-
-
-
-
-		<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - -  -->
-
-			<div class="row">
-				<div class="footer">
-
-					<div class="large-12 columns">
-					</div>
-
-
-			
 				</div>
-			</div>
-
-		<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - - - - - -  -->
 
 
 
-		  <script>
-		  document.write('<script src=' +
-		  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-		  '.js><\/script>')
-		  </script>
-		  
-		  <script src="js/foundation.min.js"></script>
-		  <!--
-		  
-		  <script src="js/foundation/foundation.js"></script>
-		  
-		  <script src="js/foundation/foundation.alerts.js"></script>
-		  
-		  <script src="js/foundation/foundation.clearing.js"></script>
-		  
-		  <script src="js/foundation/foundation.cookie.js"></script>
-		  
-		  <script src="js/foundation/foundation.dropdown.js"></script>
-		  
-		  <script src="js/foundation/foundation.forms.js"></script>
-		  
-		  <script src="js/foundation/foundation.joyride.js"></script>
-		  
-		  <script src="js/foundation/foundation.magellan.js"></script>
-		  
-		  <script src="js/foundation/foundation.orbit.js"></script>
-		  
-		  <script src="js/foundation/foundation.reveal.js"></script>
-		  
-		  <script src="js/foundation/foundation.section.js"></script>
-		  
-		  <script src="js/foundation/foundation.tooltips.js"></script>
-		  
-		  <script src="js/foundation/foundation.topbar.js"></script>
-		  
-		  <script src="js/foundation/foundation.interchange.js"></script>
-		  
-		  <script src="js/foundation/foundation.placeholder.js"></script>
-		  
-		  <script src="js/foundation/foundation.abide.js"></script>
-		  
-		  -->
-		  <script>$(document).foundation();</script>	
-		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-		  <script src="readmore.js"></script>
-		  <script>$('article').readmore({maxHeight: 100});</script>
+
+
+
+
+
+			<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - -  -->
+
+				<div class="row">
+					<div class="footer">
+
+						<div class="large-12 columns">
+						</div>
+
+
+				
+					</div>
+				</div>
+
+			<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - - - - - -  -->
+
+
+
+			  <script>
+			  document.write('<script src=' +
+			  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+			  '.js><\/script>')
+			  </script>
+			  
+			  <script src="js/foundation.min.js"></script>
+			  <!--
+			  
+			  <script src="js/foundation/foundation.js"></script>
+			  
+			  <script src="js/foundation/foundation.alerts.js"></script>
+			  
+			  <script src="js/foundation/foundation.clearing.js"></script>
+			  
+			  <script src="js/foundation/foundation.cookie.js"></script>
+			  
+			  <script src="js/foundation/foundation.dropdown.js"></script>
+			  
+			  <script src="js/foundation/foundation.forms.js"></script>
+			  
+			  <script src="js/foundation/foundation.joyride.js"></script>
+			  
+			  <script src="js/foundation/foundation.magellan.js"></script>
+			  
+			  <script src="js/foundation/foundation.orbit.js"></script>
+			  
+			  <script src="js/foundation/foundation.reveal.js"></script>
+			  
+			  <script src="js/foundation/foundation.section.js"></script>
+			  
+			  <script src="js/foundation/foundation.tooltips.js"></script>
+			  
+			  <script src="js/foundation/foundation.topbar.js"></script>
+			  
+			  <script src="js/foundation/foundation.interchange.js"></script>
+			  
+			  <script src="js/foundation/foundation.placeholder.js"></script>
+			  
+			  <script src="js/foundation/foundation.abide.js"></script>
+			  
+			  -->
+			  <script>$(document).foundation();</script>	
+			  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+			  <script src="readmore.js"></script>
+			  <script>$('article').readmore({maxHeight: 120});</script>
 
 
 		</body>

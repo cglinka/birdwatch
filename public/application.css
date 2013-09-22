@@ -1,45 +1,96 @@
 /* - - - - - - - ChirpAsana Section specific styling - - - - - - - - - - -*/
 
+/*
+________________________
+Color Style Guide
+#EFF1FO - light grey
+#BEC2C1 - mint green
+#E78226 - burnt orange
+#BD4A2D - brick red
+#BB8058 - clay
+________________________
+Font Guide
+Headers Font - font-family: 'Raleway', sans-serif;
+Paragraph Font - font-family: 'Sorts Mill Goudy', serif;
+*/
 
-body{
-  background-color: black;
-}
+
+/*- - - - - - - - - - foundation.css overrides - - - - - - 
+
+Line 17   override body font (removed)
+Line 1065 override font and font weight - 'Raleway', sans-serif;
+Line 1307 override button margin. 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 
 
-h2, h4, p{
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+/*h2, h4 {
   font-style: normal;
-  color: white;
+  color: black;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
   line-height: 1em; 
+}*/
+
+p {
+  color: white;
 }
 
 
 
 .footer {
   height: 150px;
-  background-color: purple;
+  background-color: #778899;
+}
+
+.latitude, .longitude {
+  background-color: #BEC2C1;
+}
+
+.locate-me {
+  background-color: #EFF1F0;
+  text-align: center;
+}
+
+#bird-description {
+  background-color: #BB8058;
+  border-style: double;
+  border-color: white;
+  padding-left: 1em;
 }
 
 
-.lat-long-container {
-  background-color: gray;
-  height:50px;
-/*  position: absolute;*/
+
+/*cropping notes from http://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
+.search-image{
+    float: left;
+    /*margin: .5em 10px .5em 0;*/
+    overflow: hidden; /* this is important */
+    position: relative; /* this is important too */
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 166px;
+    background-color: black;
+
+}
+
+.search-image img {
+    position: absolute;
+/*    top: -20px;
+    left: -55px;*/
 }
 
 
-.locate-me-now {
+/*.locate-me-now {
   height: 50px;
-  background-color: purple;
+}*/
+
+
+/*img {
+  border-radius: 50%
 }
-
-
-
-
+*/
 /*.bird-description {
   background-color: black;
   color:white;
