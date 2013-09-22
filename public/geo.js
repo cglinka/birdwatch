@@ -29,7 +29,7 @@ var Birdlist = Backbone.View.extend ({
 	},
 
 	render: function (){
-		for (var i =0, i< this.list.length; i++){
+		for (var i=0; i < this.list.length; i++){
 			var newListHTML = listTemplate(this.list[i]);
 			$(this.el).append(newListHTML);
 		}		

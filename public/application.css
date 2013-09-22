@@ -1,22 +1,13 @@
 /* - - - - - - - ChirpAsana Section specific styling - - - - - - - - - - -*/
 
-.locate-me-now {
-  height: 50px;
-  background-color: purple;
+
+body{
+  background-color: black;
 }
 
 
-button.small, .button.small {
-  margin-top: .70em;
-  padding-top: 0.5625em;
-  padding-right: 1.125em;
-  padding-bottom: 0.625em;
-  padding-left: 1em;
-  font-size: 0.8125em; 
-}
 
-
-h4{
+h2, h4, p{
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: normal;
   color: white;
@@ -27,6 +18,16 @@ h4{
 }
 
 
+
+
+
+
+.footer {
+  height: 150px;
+  background-color: purple;
+}
+
+
 .lat-long-container {
   background-color: gray;
   height:50px;
@@ -34,10 +35,12 @@ h4{
 }
 
 
-.footer {
-  height: 150px;
+.locate-me-now {
+  height: 50px;
   background-color: purple;
 }
+
+
 
 
 /*.bird-description {
