@@ -23,15 +23,15 @@ function setGeoCookie(position) {
 var listTemplateHTML = $('#templates .birdTemplate').html();
 var listTemplate = _.template(listTemplateHTML);
 
-var Birdlist = Backbone.View.extend ({
+var Birdlist = Backbone.View.extend({
 	initilize: function (options){
 		this.list = options.list;
 	},
 
 	render: function (){
-		for (var i=0; i < this.list.length; i++){
+		for (var i=0; i < this.options.list.length; i++){
 
-			var newListHTML = listTemplate(this.list[i]);
+			var newListHTML = listTemplate(this.options.list[i]);
 			$(this.el).append(newListHTML);
 		}		
 	}
