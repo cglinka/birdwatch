@@ -44,10 +44,20 @@ describe Chirp::Location  do
 end
 
 describe Chirp::Picture do
-  #let (:picture)
 
-  describe ".initialize"
+  describe ".initialize" do
 
-  describe "#get_picture"
+  end
+
+  describe "#get_picture" do
+    it "takes a scientific name and returns an image URL via Flickr." do
+      name = "Chordeiles minor"
+      picture = '{ "photos": { "page": 1, "pages": "533", "perpage": 1, "total": "533", 
+    "photo": [ { "id": "503934066", "owner": "10458155@N00", "secret": "bfbcb366c9", "server": "222", "farm": 1, "title": "Eastern Wood-Pewee", "ispublic": 1, "isfriend": 0, "isfamily": 0, "url_q": "http:\/\/farm1.staticflickr.com\/222\/503934066_bfbcb366c9_q.jpg", "height_q": "150", "width_q": "150" }
+    ] }, "stat": "ok" }'
+
+      
+    end
+  end
 
 end

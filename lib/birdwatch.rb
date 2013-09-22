@@ -72,10 +72,7 @@ module Chirp
       )
 
       jpic = JSON.parse(picture)
-      a = jpic["photos"]["photo"][0]["url_q"]
-      # info = flickr.photos.getInfo(:photo_id => a)
-      # manual_url = 
-      # url = FlickRaw.url_b(info)
+      url = jpic["photos"]["photo"][0]["url_q"]
       return url
     end
 
