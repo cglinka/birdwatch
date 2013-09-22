@@ -35,6 +35,3 @@ var Birdlist = Backbone.View.extend ({
 		}		
 	}
 }
-
-var blist = new Birdlist(window.birds_json)
-

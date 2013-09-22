@@ -3,10 +3,11 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'rest-client'
+require 'flickraw'
 require_relative 'lib/birdwatch.rb'
 
-get '/' do 
-    erb:index   
+get '/' do
+    erb:index
 end
 
 get '/birdlist' do
@@ -16,7 +17,7 @@ get '/birdlist' do
     @birds_json = @birds_json.map { |o| Hash[o.each_pair.to_a] }.to_json
 
 
-   
-    
+
+
     erb:birdlist
 end

@@ -3,7 +3,7 @@ require_relative "../lib/birdwatch.rb"
 describe Chirp::Location  do
   let (:loc){Chirp::Location.new([-97.75000, 30.25000])}
   let (:locdist){Chirp::Location.new([-97.75000, 30.25000], 10)}
-  
+
   describe ".initialize" do
     context "When no distance is inputed" do
       it 'sets latitude, longitude, and distance of 5' do
@@ -12,10 +12,10 @@ describe Chirp::Location  do
         expect(loc.dist).to eq(5)
       end
     end
-    
+
     context "When distance is inputed" do
       it 'sets latitude, longitude and distance' do
-        
+
         expect(locdist.lat).to eq(30.25)
         expect(locdist.long).to eq(-97.75)
         expect(locdist.dist).to eq(10)
@@ -43,8 +43,13 @@ describe Chirp::Location  do
   end
 end
 
-# describe Chirp::Picture do
-#   desribe ".initialize" do
-#     it ""
-#   end
-# end
+end
+
+describe Chirp::Picture do
+  let (:picture)
+
+  describe ".initialize"
+
+  describe "#get_picture"
+
+end
