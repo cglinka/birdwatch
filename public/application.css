@@ -1,0 +1,52 @@
+/* - - - - - - - ChirpAsana Section specific styling - - - - - - - - - - -*/
+
+.locate-me-now {
+  height: 50px;
+  background-color: purple;
+}
+
+
+button.small, .button.small {
+  margin-top: .70em;
+  padding-top: 0.5625em;
+  padding-right: 1.125em;
+  padding-bottom: 0.625em;
+  padding-left: 1em;
+  font-size: 0.8125em; 
+}
+
+
+h4{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: white;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1em; 
+}
+
+
+.lat-long-container {
+  background-color: gray;
+  height:50px;
+/*  position: absolute;*/
+}
+
+
+.footer {
+  height: 150px;
+  background-color: purple;
+}
+
+
+/*.bird-description {
+  background-color: black;
+  color:white;
+}
+*/
+
+
+
+
+/* - - - - - - - ChirpAsana Section specific styling END - - - - - - - - - -*/
