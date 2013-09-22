@@ -17,9 +17,13 @@ module Chirp
       @dist = dist
     end
 
+    # Get list of recently observed birds in JSON format from Cornell API.
+    #
+    # Return an Array of Hash objects containing the common and scientific 
+    # bird names.
     def get_list
       @url_str = mk_str
-      @list = RestClient.get(@url_str, {:accept => :json})
+      call_cornell_api
       @list = JSON.parse(@list)
       @template= []
       @list.each do |bird|
@@ -29,16 +33,23 @@ module Chirp
       @template
     end
 
+    # Make the cornell api URL string from the initialized location.
     def mk_str
       str = "http://ebird.org/ws1.1/data/obs/geo/recent?lng=#{@long}&lat=#{@lat}&dist=#{@dist}&fmt=json"
+    end
+
+    # Call cornell api with URL from mk_str, store returning json object in 
+    # @list.
+    def call_cornell_api
+      @list = RestClient.get(@url_str, {:accept => :json})
     end
   end
 
   class Content
     # List is an Array of Hashes
     #
-    # EX: [ {'comName' => 'Sparrow', 'sciName' => 'Sparrowus Thingify'}, {'comName' => 'Common Name',
-    # 'sciName' => 'Scientific name'}]
+    # EX: [ {'comName' => 'Sparrow', 'sciName' => 'Sparrowus Thingify'}, 
+    #       {'comName' => 'Common Name', 'sciName' => 'Scientific name'}]
     def initialize(list)
       @list = list
     end
