@@ -12,9 +12,8 @@ end
 get '/birdlist' do
     @lat_lng = cookies[:lat_lng].split("|")
     @loc = Chirp::Location.new(@lat_lng)
-    birds_json = @loc.get_list()
-    birds_json = birds_json.map { |o| Hash[o.each_pair.to_a] }.to_json
-    puts birds_json
+    @birds_json = @loc.get_list()
+    @birds_json = @birds_json.map { |o| Hash[o.each_pair.to_a] }.to_json
 
 
    
