@@ -2,6 +2,7 @@ require 'json'
 require 'rest-client'
 require 'pry'
 require 'bundler/setup'
+require 'rubygems'
 
 
 module Chirp
@@ -12,13 +13,16 @@ module Chirp
       @lat = lat_lng[1].round(2)
       @dist = dist
     end
-
     def get_list
-     @url_str = mk_str
-     puts @url_str
-      birds_json = RestClient.get(@url_str, {:accept => :json})
-      puts birds_json
-      birds_json = JSON.parse(birds_json)
+      @url_str = mk_str
+      @list = RestClient.get(@url_str, {:accept => :json})
+      @list = JSON.parse(@list)
+      template= []
+      @list.each do |bird|
+        @birdie ={"comName"=> bird["comName"], "sciName"=> bird["sciName"]}
+        template << @birdie
+      end
+      template
     end
 
     def mk_str

@@ -29,4 +29,21 @@ describe Chirp::Location  do
       expect(locdist.mk_str).to eq("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-97.75&lat=30.25&dist=10&fmt=json")
     end
   end
+
+  describe "#get_loc" do
+    it "returns an array of objects " do
+      list=double("list")
+
+      allow(list).to receive(:jsonlist).and_return([
+        {"comName"=>"Baltimore Oriole", "sciName"=>"Icterus galbula"},
+        {"comName"=>"Yellow-bellied Flycatcher", "sciName"=>"Empidonax flaviventris"},
+        {"comName"=>"Common Nighthawk", "sciName"=>"Chordeiles minor"}])
+    end
+  end
 end
+
+# describe Chirp::Picture do
+#   desribe ".initialize" do
+#     it ""
+#   end
+# end

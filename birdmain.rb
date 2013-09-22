@@ -12,7 +12,8 @@ end
 get '/birdlist' do
     @lat_lng = cookies[:lat_lng].split("|")
     @loc = Chirp::Location.new(@lat_lng)
-    @url_str = @loc.mkstr
-    list = RestClient.get(@url_str), {:accept => :json}
+    birds_json = @loc.get_list()
+   
+    
     erb:birdlist
 end
