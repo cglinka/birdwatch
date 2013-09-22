@@ -7,10 +7,10 @@ require 'rubygems'
 
 module Chirp
   class Location
-    attr_reader :lat, :long, :dist
+    attr_reader :lat, :long, :dist 
     def initialize(lat_lng, dist=5)
-      @long = lat_lng[0].round(2)
-      @lat = lat_lng[1].round(2)
+      @lat = lat_lng[0].to_f.round(2)
+      @long = lat_lng[1].to_f.round(2)
       @dist = dist
     end
     def get_list

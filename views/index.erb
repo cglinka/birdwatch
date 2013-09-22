@@ -18,7 +18,7 @@
      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 		<script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
 <script type="text/javascript">
-window.birds = "<%= @birds_json %>";
+// window.birds = <%= @birds_json %>;
      </script>
 </head>
 
@@ -113,9 +113,9 @@ window.birds = "<%= @birds_json %>";
 						<div class="search-results">
 							
 							<div class="large-3 columns">
-								// <div class="search-image">
-								// 	<img src={{img_src}}>
-								// </div>
+								<div class="search-image">
+									<img src={{img_src}}>
+								</div>
 							</div>
 
 							<div class="large-9 columns">
@@ -289,6 +289,13 @@ document.write('<script src=' +
 <script src="readmore.js"></script>
 <script>$('article').readmore({maxHeight: 100});</script>
 <script type="text/javascript" src="geo.js"></script>
+<script type="text/javascript">
+  // Change underscore template interprolation
+  // syntax from <%= %> to {{ }}
+  _.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g
+  };
+  </script>
 
 
 </body>
