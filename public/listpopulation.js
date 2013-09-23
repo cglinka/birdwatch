@@ -37,7 +37,7 @@ var testList =[
     }];
 
 var blist = new Birdlist({
-    list: testList,
+    list: window.birds,
     el: $('.all-search-results')
   });
 blist.render();
