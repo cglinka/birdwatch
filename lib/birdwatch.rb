@@ -1,9 +1,8 @@
 require 'json'
-require 'rest-client'
+require 'rest_client'
 require 'pry'
 require 'bundler/setup'
 require 'rubygems'
-
 
 module Chirp
   class Location
@@ -12,6 +11,8 @@ module Chirp
       @lat = lat_lng[0].to_f.round(2)
       @long = lat_lng[1].to_f.round(2)
       @dist = dist
+      puts @long
+      puts @lat
     end
     def get_list
       @url_str = mk_str
