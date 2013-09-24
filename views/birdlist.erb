@@ -1,196 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>chirpasana</title>
-   <link rel="stylesheet" href="application.css">
-   <link rel="stylesheet" href="foundation.css">
-   <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-   <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+  <head>
+    <meta charset="utf-8" />
+    <title>chirpasana</title>
 
-   <script src="js/vendor/custom.modernizr.js"></script>
+     <link rel="stylesheet" href="application.css">
+     <link rel="stylesheet" href="foundation.css">
+     <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
-		<script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
-<script type="text/javascript">
-window.birds = <%= @birds_json %>;
-     </script>
-</head>
+     <script src="js/vendor/custom.modernizr.js"></script>
 
+      <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+    <script type="text/javascript">
+      window.birds = <%= @birds_json %>;
+    </script>
 
+  </head>
+  <body>
 
-<body>
-
-<!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
-<!-- PENDING -->
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
+  <!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
+  <!-- PENDING -->
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 
-<!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
-<div class="brand-bar">
-<div class="row">
-<div class="large-3 columns">
-<h2>chirp chirp</h2>
-<hr />
-</div>
 
-<div class="large-9 columns">
-<h2>our main header image</h2>
-<hr />
-</div>
-</div>
-</div>
+  <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
+  <div class="brand-bar">
+  <div class="row">
+  <div class="large-3 columns">
+  <h2>chirp chirp</h2>
+  <hr />
+  </div>
 
+  <div class="large-9 columns">
+  <h2>our main header image</h2>
+  <hr />
+  </div>
+  </div>
+  </div>
 
 
 
 
-<!-- - - - - - - - - - search me button - - - - - - - - -->
 
-<div class="row">
-<div class="large-12 columns">
-<div class="locate-me">
-<!-- <button id="locate-butt">press me to get started</button> -->
-</div>
-</div>
-</div>
+  <!-- - - - - - - - - - search me button - - - - - - - - -->
 
-<!-- - - - - - - Lat & Long - - - - - - - - -->
+  <div class="row">
+  <div class="large-12 columns">
+  <div class="locate-me">
+  <!-- <button id="locate-butt">press me to get started</button> -->
+  </div>
+  </div>
+  </div>
 
-<div class="row">
+  <!-- - - - - - - Lat & Long - - - - - - - - -->
 
-
-<!-- Nested columns for lat + long -->
-<div class="large-12 columns">
-<div class="lat-long-container">
-
-<!-- - - - - - latitude - - - - - - -->
-<div class="large-6 columns">
-<div class="latitude">
-<div id="latitude-text">
-<h4>latitude: </h4>
-</div>
-
-<div class="latitude-calc">
-<h4><%= @lat %></h4>
-</div>
-
-</div>
-</div>
-
-<!-- - - - - - longitude - - - - - - -->
-<div class="large-6 columns">
-<div class="longitude">
-<div id="longitude-text">
-<h4>longitude: </h4>
-</div>
-
-<div class="longitude-calc">
-<h4><%= @long %></h4>
-</div>
-</div>
-</div>
-
-</div> <!-- - class lat long container -->
-</div>	<!-- - close large 9 columns -->
-</div>
+  <div class="row">
 
 
+  <!-- Nested columns for lat + long -->
+  <div class="large-12 columns">
+  <div class="lat-long-container">
 
+  <!-- - - - - - latitude - - - - - - -->
+  <div class="large-6 columns">
+  <div class="latitude">
+  <div id="latitude-text">
+  <h4>latitude: </h4>
+  </div>
 
-<!-- - - - - - - - - - - - - - - Search Result Container - - - - - - - - - - - - - - - - - - - - - - - -->
-<div class="all-search-results"></div>
+  <div class="latitude-calc">
+  <h4><%= @lat %></h4>
+  </div>
 
-			<div id="templates">
-				<script class="birdTemplate" type="text/template">
-				    <div class="row">
-						<div class="search-results">
+  </div>
+  </div>
 
-							<div class="large-3 columns">
-								<div class="search-image">
+  <!-- - - - - - longitude - - - - - - -->
+  <div class="large-6 columns">
+  <div class="longitude">
+  <div id="longitude-text">
+  <h4>longitude: </h4>
+  </div>
 
-								</div>
-							</div>
+  <div class="longitude-calc">
+  <h4><%= @long %></h4>
+  </div>
+  </div>
+  </div>
 
-							<div class="large-9 columns">
-								<section id="bird-description">
-
-
-									<div class="row">
-										<div class="large-6 columns">
-											<div class="common-name">
-												<p>{{comName}}</p>
-											</div>
-										</div>
-
-										<div class="large-6 columns">
-											<div class="scientific name">
-												<p>{{sciName}}</p>
-											</div>
-										</div>
-									</div>
-
-									<article class="slide">
-									</article>
-								</section>
-							</div>
-						</div>
-					</div>
-				</script>
-			</div>
-
-<!-- - - - - - - - - - - - - - - Close Search Result Container - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </div> <!-- - class lat long container -->
+  </div>	<!-- - close large 9 columns -->
+  </div>
 
 
 
 
-<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - - -->
+  <!-- - - - - - - - - - - - - - - Search Result Container - - - - - - - - - - - - - - - - - - - - - - - -->
+  <div class="all-search-results"></div>
 
-<div class="row">
-<div class="footer">
+  			<div id="templates">
+  				<script class="birdTemplate" type="text/template">
+  				    <div class="row">
+  						<div class="search-results">
 
-<div class="large-12 columns">
-</div>
+  							<div class="large-3 columns">
+  								<div class="search-image">
+
+  								</div>
+  							</div>
+
+  							<div class="large-9 columns">
+  								<section id="bird-description">
+
+
+  									<div class="row">
+  										<div class="large-6 columns">
+  											<div class="common-name">
+  												<p>{{comName}}</p>
+  											</div>
+  										</div>
+
+  										<div class="large-6 columns">
+  											<div class="scientific name">
+  												<p>{{sciName}}</p>
+  											</div>
+  										</div>
+  									</div>
+
+  									<article class="slide">
+  									</article>
+  								</section>
+  							</div>
+  						</div>
+  					</div>
+  				</script>
+  			</div>
+
+  <!-- - - - - - - - - - - - - - - Close Search Result Container - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 
 
-</div>
-</div>
 
-<!-- - - - - - - - - - - - - - - - - END - - - - - - - - - - - - - - - - -->
+  <!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - - -->
+
+  <div class="row">
+  <div class="footer">
+
+  <div class="large-12 columns">
+  </div>
 
 
 
-<script>
-document.write('<script src=' +
-('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-'.js><\/script>')
-</script>
+  </div>
+  </div>
 
-<script src="js/foundation.min.js"></script>
+  <!-- - - - - - - - - - - - - - - - - END - - - - - - - - - - - - - - - - -->
 
-<script>$(document).foundation();</script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-<script src="readmore.js"></script>
-<script>$('article').readmore({maxHeight: 100});</script>
 
-<script type="text/javascript">
-  // Change underscore template interprolation
-  // syntax from <%= %> to {{ }}
-  _.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
-  };
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
   </script>
-  <script type="text/javascript" src="listpopulation.js"></script>
+
+  <script src="js/foundation.min.js"></script>
+
+  <script>$(document).foundation();</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script src="readmore.js"></script>
+  <script>$('article').readmore({maxHeight: 100});</script>
+
+  <script type="text/javascript">
+    // Change underscore template interprolation
+    // syntax from <%= %> to {{ }}
+    _.templateSettings = {
+      interpolate: /\{\{(.+?)\}\}/g
+    };
+    </script>
+    <script type="text/javascript" src="listpopulation.js"></script>
 
 
-</body>
+  </body>
 </html>
