@@ -20,46 +20,66 @@ Paragraph Font - font-family: 'Sorts Mill Goudy', serif;
 Line 17   override body font (removed)
 Line 1065 override font and font weight - 'Raleway', sans-serif;
 Line 1307 override button margin. 
+Line 1476 box shadow override
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 
-
-/*h2, h4 {
-  font-style: normal;
-  color: black;
-  text-rendering: optimizeLegibility;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
-  line-height: 1em; 
-}*/
 
 p {
   color: white;
 }
 
-
-
-.footer {
-  height: 150px;
-  background-color: #778899;
+.brand-bar h2{
+  color: purple;
+  text-align: center;
 }
 
+.all-search-results {
+  background-image: url("butter980.gif");
+  background-size:100%;
+/*  max-height: 660px;*/
+  max-height: 550px;
+
+  overflow: scroll;
+
+}
+
+/*.footer {
+  background-color: yellow;
+}
+*/
 .latitude, .longitude {
-  background-color: #BEC2C1;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-top: -5px;
+  height: 80px;
 }
+
+
+.latitude h4 {
+  color: gray;
+}
+
+.longitude h4{
+  color: gray;
+}
+
 
 .locate-me {
-  background-color: #EFF1F0;
   text-align: center;
 }
 
 #bird-description {
-  background-color: #BB8058;
-  border-style: double;
-  border-color: white;
+
+  background: rgba(0, 0, 0, 0.8);
   padding-left: 1em;
+  margin-bottom: 5px;
 }
 
+body{
+/*  background-image: url("flock.jpg");
+  background-repeat: repeat;*/
+}
 
 
 /*cropping notes from http://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
@@ -69,33 +89,16 @@ p {
     overflow: hidden; /* this is important */
     position: relative; /* this is important too */
     border: 1px solid #ccc;
-    width: 250px;
-    height: 166px;
-    background-color: black;
-
+    width: 249px;
+    height: 161px;
 }
 
 .search-image img {
     position: absolute;
-/*    top: -20px;
-    left: -55px;*/
+
 }
 
 
-/*.locate-me-now {
-  height: 50px;
-}*/
-
-
-/*img {
-  border-radius: 50%
-}
-*/
-/*.bird-description {
-  background-color: black;
-  color:white;
-}
-*/
 
 
 
