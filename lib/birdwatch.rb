@@ -3,6 +3,7 @@ require 'rest_client'
 require 'pry'
 require 'bundler/setup'
 require 'rubygems'
+require 'rest_client'
 
 module Chirp
   class Location
