@@ -1,5 +1,3 @@
-
-
 function initiate_geolocation(){
 	navigator.geolocation.getCurrentPosition(handle_geolocation_query);
   navigator.geolocation.getCurrentPosition(setGeoCookie);
@@ -19,12 +17,4 @@ function setGeoCookie(position) {
 
 $('#locate-butt').on('click', function(e){
   initiate_geolocation();
-    
 });
-
-
-
-
-
-
-

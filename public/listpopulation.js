@@ -11,13 +11,9 @@ var Birdlist = Backbone.View.extend({
 
 			var newListHTML = listTemplate(this.options.list[i]);
 			$(this.el).append(newListHTML);
-		}		
+		}
 	}
 });
-
-
-
-//var blist = new Birdlist(window.birds_json)
 
 var testList =[
     {
@@ -40,4 +36,5 @@ var blist = new Birdlist({
     list: window.birds,
     el: $('.all-search-results')
   });
+
 blist.render();
