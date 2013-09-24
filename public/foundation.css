@@ -10,16 +10,22 @@ body {
   font-size: 100%; }
 
 body {
-  background: black; /*Nik: updated to black. could not override in application.css*/
-  color: #222222;
+/*  background: white; 
+  color: #222222;*/
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   font-style: normal;
   line-height: 1;
   position: relative;
-  cursor: default; }
+  cursor: default; 
+
+
+
+
+
+}
 
 a:hover {
   cursor: pointer; }
@@ -74,7 +80,8 @@ img {
 
 img {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle; 
+}
 
 textarea {
   height: auto;
@@ -1061,8 +1068,10 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
+  font-family:'Raleway', sans-serif;
+  
+  /*font-weight: bold;*/
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
@@ -1305,13 +1314,15 @@ blockquote p {
   .show-for-print {
     display: inherit !important; } }
 button, .button {
-  border-style: solid;
-  border-width: 1px;
+/*  border-style: solid;
+  border-width: 1px;*/
   cursor: pointer;
-  font-family: inherit;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
   line-height: 1;
-  margin: 0 0 1.25em;
+ /* - - - CUSTOM OVERRIDE - - - */
+  margin: 0 0 0 0 ;
+/*  - - - - - - - - - - */
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -1322,8 +1333,15 @@ button, .button {
   padding-left: 1.5em;
   font-size: 1em;
   background-color: #2ba6cb;
-  border-color: #2284a1;
+  /*border-color: #2284a1;*/
   color: white; }
+
+
+
+
+
+
+
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #2284a1; }
   button:hover, button:focus, .button:hover, .button:focus {
@@ -1456,8 +1474,8 @@ button, .button {
 
 @media only screen {
   button, .button {
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    /*-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;*/
     -webkit-transition: background-color 300ms ease-out;
     -moz-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out; }

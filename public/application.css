@@ -1,50 +1,104 @@
 /* - - - - - - - ChirpAsana Section specific styling - - - - - - - - - - -*/
 
+/*
+________________________
+Color Style Guide
+#EFF1FO - light grey
+#BEC2C1 - mint green
+#E78226 - burnt orange
+#BD4A2D - brick red
+#BB8058 - clay
+________________________
+Font Guide
+Headers Font - font-family: 'Raleway', sans-serif;
+Paragraph Font - font-family: 'Sorts Mill Goudy', serif;
+*/
 
-body{
-  background-color: black;
-}
+
+/*- - - - - - - - - - foundation.css overrides - - - - - - 
+
+Line 17   override body font (removed)
+Line 1065 override font and font weight - 'Raleway', sans-serif;
+Line 1307 override button margin. 
+Line 1476 box shadow override
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 
 
-h2, h4, p{
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-style: normal;
+p {
   color: white;
-  text-rendering: optimizeLegibility;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
-  line-height: 1em; 
 }
 
-
-
-.footer {
-  height: 150px;
-  background-color: purple;
+.brand-bar h2{
+  color: purple;
+  text-align: center;
 }
 
+.all-search-results {
+  background-image: url("butter980.gif");
+  background-size:100%;
+/*  max-height: 660px;*/
+  max-height: 550px;
 
-.lat-long-container {
-  background-color: gray;
-  height:50px;
-/*  position: absolute;*/
+  overflow: scroll;
+
 }
 
-
-.locate-me-now {
-  height: 50px;
-  background-color: purple;
-}
-
-
-
-
-/*.bird-description {
-  background-color: black;
-  color:white;
+/*.footer {
+  background-color: yellow;
 }
 */
+.latitude, .longitude {
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-top: -5px;
+  height: 80px;
+}
+
+
+.latitude h4 {
+  color: gray;
+}
+
+.longitude h4{
+  color: gray;
+}
+
+
+.locate-me {
+  text-align: center;
+}
+
+#bird-description {
+
+  background: rgba(0, 0, 0, 0.8);
+  padding-left: 1em;
+  margin-bottom: 5px;
+}
+
+body{
+/*  background-image: url("flock.jpg");
+  background-repeat: repeat;*/
+}
+
+
+/*cropping notes from http://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
+.search-image{
+    float: left;
+    /*margin: .5em 10px .5em 0;*/
+    overflow: hidden; /* this is important */
+    position: relative; /* this is important too */
+    border: 1px solid #ccc;
+    width: 249px;
+    height: 161px;
+}
+
+.search-image img {
+    position: absolute;
+
+}
+
+
 
 
 

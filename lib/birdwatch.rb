@@ -1,10 +1,9 @@
 require 'json'
-require 'rest-client'
+require 'rest_client'
 require 'pry'
 require 'bundler/setup'
 require 'rubygems'
 require 'flickraw'
-
 
 module Chirp
   class Location
@@ -12,9 +11,11 @@ module Chirp
     attr_accessor :template
 
     def initialize(lat_lng, dist=5)
-      @long = lat_lng[0].round(2)
-      @lat = lat_lng[1].round(2)
+      @lat = lat_lng[0].to_f.round(2)
+      @long = lat_lng[1].to_f.round(2)
       @dist = dist
+      puts @long
+      puts @lat
     end
 
     # Get list of recently observed birds in JSON format from Cornell API.
@@ -25,12 +26,12 @@ module Chirp
       @url_str = mk_str
       call_cornell_api
       @list = JSON.parse(@list)
-      @template= []
+      template= []
       @list.each do |bird|
         @birdie ={"comName"=> bird["comName"], "sciName"=> bird["sciName"]}
-        @template << @birdie
+        template << @birdie
       end
-      @template
+      template
     end
 
     # Make the cornell api URL string from the initialized location.
