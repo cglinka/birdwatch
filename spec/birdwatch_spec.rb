@@ -65,6 +65,15 @@ describe Chirp::Content do
     end
   end
 
+  describe "#flickr_call" do
+    it 'takes a scientific name and returns a JSON object' do
+      
+    end
+  end
+
+
+
+
   describe "#get_picture" do
     it "takes a scientific name and returns an image URL." do
       picture = '{ "photos": 

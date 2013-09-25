@@ -72,10 +72,10 @@ module Chirp
 
     # Flickr search: take scientific name and search flickr
     #
-    # Returns URL of most interesting image that is associated with text that matches the scientific name.
-    def get_picture(name)
-      FlickRaw.api_key = ENV['API_KEY']
-      FlickRaw.shared_secret = ENV['SHARED_SECRET']
+    # Returns a Ruby Hash object.
+    def flickr_call(name)
+      FlickRaw.api_key =ENV['API_KEY']
+      FlickRaw.shared_secret =ENV['SHARED_SECRET']
 
       picture = flickr.photos.search(
         :text => name,
@@ -86,9 +86,14 @@ module Chirp
         :per_page => 1,
         :extras => 'url_q'
       )
+      return picture[0]
+    end
 
-      jpic = JSON.parse(picture)
-      url = jpic["photos"]["photo"][0]["url_q"]
+    # Takes a Hash object as arguemnt and isolates the picture URL.
+    #
+    # Returns URL of most interesting image that is associated with text that matches the scientific name.
+    def get_pic_url(picture)
+      url = picture["url_q"]
       return url
     end
 
