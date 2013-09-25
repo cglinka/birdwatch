@@ -48,17 +48,20 @@ module Chirp
   end
 
   class Content
+    attr_reader :list, :sci_name_list
     # List is an Array of Hashes
     #
     # EX: [ {'comName' => 'Sparrow', 'sciName' => 'Sparrowus Thingify'},
     #       {'comName' => 'Common Name', 'sciName' => 'Scientific name'}]
     def initialize(list)
       @list = list
+      @sci_name_list = []
     end
 
     # Method to pull the scientific name into an array on it's own.
     #
     # Returns an Array of Hashes
+    # WORKS!!
     def scientific_name_list
       @list.each do |bird|
         sci_name = bird["sciName"]

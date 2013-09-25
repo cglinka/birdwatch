@@ -1,8 +1,8 @@
 require_relative "../lib/birdwatch.rb"
 
 describe Chirp::Location  do
-  let (:loc){Chirp::Location.new([-97.75000, 30.25000])}
-  let (:locdist){Chirp::Location.new([-97.75000, 30.25000], 10)}
+  let (:loc){Chirp::Location.new([30.25000, -97.75000])}
+  let (:locdist){Chirp::Location.new([30.25000, -97.75000], 10)}
 
   describe ".initialize" do
     context "When no distance is inputed" do
@@ -36,7 +36,7 @@ describe Chirp::Location  do
     it "returns an array of objects " do
       list=double("list")
 
-      allow(list).to receive(:jsonlist).and_return([
+      allow(list).to receive().and_return([
         {"comName"=>"Baltimore Oriole", "sciName"=>"Icterus galbula"},
         {"comName"=>"Yellow-bellied Flycatcher", "sciName"=>"Empidonax flaviventris"},
         {"comName"=>"Common Nighthawk", "sciName"=>"Chordeiles minor"}])
@@ -53,10 +53,16 @@ describe Chirp::Content do
         {"comName"=>"Yellow-bellied Flycatcher", "sciName"=>"Empidonax flaviventris"},
         {"comName"=>"Common Nighthawk", "sciName"=>"Chordeiles minor"}
   ]}
-  let(:testobj) {Chirp::Content.new(list)}
+  let(:testobj){Chirp::Content.new(list)}
 
   describe ".initialize" do
-
+    context 'takes an Array of Hashes and creates a new Chirp::Content Object' do
+      it 'sets Chirp::Content.new(list).list = list' do
+        expect(testobj.list).is_a?(Array)
+        expect(testobj.sci_name_list).is_a?(Array)
+        expect(testobj.sci_name_list).to eq([])
+      end
+    end
   end
 
   describe "#get_picture" do
