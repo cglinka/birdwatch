@@ -26,7 +26,7 @@ Line 1476 box shadow override
 
 
 p {
-  color: white;
+  color: black;
 }
 
 .brand-bar h2{
@@ -35,19 +35,15 @@ p {
 }
 
 .all-search-results {
-  background-image: url("butter980.gif");
+  background-image: url("winged.jpg");
+  /*http://www.wallcg.com/pin-hd-birds-photo-10-1366x768-download-on-124799/*/
   background-size:100%;
-/*  max-height: 660px;*/
-  max-height: 550px;
-
+  max-height: 600px;
+  background-repeat: no-repeat;
   overflow: scroll;
-
 }
 
-/*.footer {
-  background-color: yellow;
-}
-*/
+
 .latitude, .longitude {
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
@@ -71,31 +67,48 @@ p {
 
 #bird-description {
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   padding-left: 1em;
   margin-bottom: 5px;
+  border-radius: 5px;
 }
 
-body{
-/*  background-image: url("flock.jpg");
-  background-repeat: repeat;*/
+
+.common-name {
+  margin-left: -15px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius-left-bottom: 5px
+
 }
+
+.scientific-name{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.scientific-name p {
+  color: white;
+}
+
+.common-name p {
+  color: white;
+}
+
 
 
 /*cropping notes from http://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
 .search-image{
     float: left;
-    /*margin: .5em 10px .5em 0;*/
     overflow: hidden; /* this is important */
     position: relative; /* this is important too */
     border: 1px solid #ccc;
     width: 249px;
     height: 161px;
+    border-radius: 5px;
 }
+
 
 .search-image img {
     position: absolute;
-
 }
 
 
