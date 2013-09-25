@@ -10,12 +10,10 @@ module Chirp
     attr_reader :lat, :long, :dist
     attr_accessor :template
 
-    def initialize(lat_lng, dist=5)
+    def initialize(lat_lng, dist=1)
       @lat = lat_lng[0].to_f.round(2)
       @long = lat_lng[1].to_f.round(2)
       @dist = dist
-      puts @long
-      puts @lat
       @sci_name_list = []
     end
 
@@ -48,7 +46,7 @@ module Chirp
   end
 
   class Content
-    attr_reader :list, :sci_name_list
+    attr_reader :list, :sci_name_list, :pic_array
     # List is an Array of Hashes
     #
     # EX: [ {'comName' => 'Sparrow', 'sciName' => 'Sparrowus Thingify'},
@@ -74,6 +72,7 @@ module Chirp
     #
     # Returns a Ruby Hash object.
     def flickr_call(name)
+
       FlickRaw.api_key =ENV['API_KEY']
       FlickRaw.shared_secret =ENV['SHARED_SECRET']
 
@@ -92,7 +91,8 @@ module Chirp
     # Takes a Hash object as arguemnt and isolates the picture URL.
     #
     # Returns URL of most interesting image that is associated with text that matches the scientific name.
-    def get_pic_url(picture)
+    def get_pic_url(name)
+      picture = flickr_call(name)
       url = picture["url_q"]
       return url
     end
@@ -104,8 +104,9 @@ module Chirp
     # Returns an Array of image URLs
     def picture_array
       @sci_name_list = scientific_name_list
+      @pic_array = []
       @sci_name_list.each do |bird|
-        get_picture(bird)
+        url = get_pic_url(bird)
         @pic_array << url
       end
       return @pic_array
@@ -116,7 +117,8 @@ module Chirp
     def add_to_template
       @pic_urls = picture_array
       @list.each_with_index do |bird, index|
-        bird = { 'img_url' => pic_urls[index] }
+        url = @pic_urls[index]
+        @list[index]["img_url"] = url
       end
       return @list
     end

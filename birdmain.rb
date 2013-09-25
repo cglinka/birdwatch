@@ -24,7 +24,7 @@ get '/birdlist' do
     # Takes list of bird names and feeds it into the Content class
     @content = Chirp::Content.new(@birds)
     # # Appends image URL's to each Hash object in the @content Array.
-    2
+    @content = @content.add_to_template
     # # Turn ruby object back into JSON.
     @birds_json = @content.map { |o| Hash[o.each_pair.to_a] }.to_json
 

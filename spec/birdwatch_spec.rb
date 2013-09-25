@@ -9,7 +9,7 @@ describe Chirp::Location  do
       it 'sets latitude, longitude, and distance of 5' do
         expect(loc.lat).to eq(30.25)
         expect(loc.long).to eq(-97.75)
-        expect(loc.dist).to eq(5)
+        expect(loc.dist).to eq(1)
       end
     end
 
@@ -66,34 +66,21 @@ describe Chirp::Content do
   end
 
   describe "#flickr_call" do
-    it 'takes a scientific name and returns a JSON object' do
-      
+    it 'takes a scientific name and returns a Ruby Hash object' do
+      allow(:testobj).to receive(:flickr_call).and_return([{"id"=>"505840094", "owner"=>"86442142@N00", "secret"=>"3c663af34a", "server"=>"190", "farm"=>1, "title"=>"Baltimore Oriole (male)", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "url_q"=>"http://farm1.staticflickr.com/190/505840094_3c663af34a_q.jpg", "height_q"=>"150", "width_q"=>"150"}])
+
+      expect(testobj.flickr_call("Icterus galbula")).is_a?(Hash)
+      # expect(testobj.flickr_call("Icterus galbula")).to eq({"id"=>"505840094", "owner"=>"86442142@N00", "secret"=>"3c663af34a", "server"=>"190", "farm"=>1, "title"=>"Baltimore Oriole (male)", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "url_q"=>"http://farm1.staticflickr.com/190/505840094_3c663af34a_q.jpg", "height_q"=>"150", "width_q"=>"150"})
     end
   end
 
 
 
 
-  describe "#get_picture" do
-    it "takes a scientific name and returns an image URL." do
-      picture = '{ "photos": 
-        { "page": 1, "pages": "759", "perpage": 1, "total": "759", "photo": [
-            { "id": "3656997399", 
-              "owner": "70619288@N00", 
-              "secret": "33e1012137", 
-              "server": "3582", 
-              "farm": 4, 
-              "title": "Finding Your Inner Peace", 
-              "ispublic": 1, 
-              "isfriend": 0, 
-              "isfamily": 0, 
-              "url_q": "http:\/\/farm4.staticflickr.com\/3582\/3656997399_33e1012137_q.jpg", 
-              "height_q": "150", 
-              "width_q": "150" }
-        ] }, 
-        "stat": "ok" }'
-
-      expect(testobj.get_picture('Chordeiles minor')).to eq("http:\/\/farm4.staticflickr.com\/3582\/3656997399_33e1012137_q.jpg")
+  describe "#get_pic_url" do
+    it "takes a Hash object and returns an image URL." do
+      
+      expect(testobj.get_pic_url()).to eq()
     end
   end
 
