@@ -53,20 +53,20 @@ module Chirp
     #       {'comName' => 'Common Name', 'sciName' => 'Scientific name'}]
     def initialize(list)
       @list = list
-      @sci_name_list = []
+      @name_list = []
     end
 
-    # Method to pull the scientific name into an array on it's own.
+    # Method to pull the scientific or common name into an array on it's own.
+    # name must be either "sciName" or "comName"
     #
     # Returns an Array of Hashes
     # WORKS!!
-    def scientific_name_list
+    def name_list(name)
       @list.each do |bird|
-        sci_name = bird["sciName"]
-        @sci_name_list << sci_name
+        bird_name = bird[name]
+        @name_list << bird_name
       end
-      puts "The @sci_name_list is #{@sci_name_list.length} long."
-      return @sci_name_list
+      return @name_list
     end
 
     # Flickr search: take scientific name and search flickr
@@ -74,9 +74,13 @@ module Chirp
     # Returns a Ruby Hash object.
     def flickr_call(name)
 
-      FlickRaw.api_key =ENV['API_KEY']
-      FlickRaw.shared_secret =ENV['SHARED_SECRET']
+      # FlickRaw.api_key =ENV['API_KEY']
+      # FlickRaw.shared_secret =ENV['SHARED_SECRET']
+      FlickRaw.api_key ='92902020c21a89d6133eb748396c78cb'
 
+
+      FlickRaw.shared_secret ='f15fc36f5e05e736'
+      
       picture = flickr.photos.search(
         :text => name,
         :sort => 'interestingness-desc',
@@ -105,7 +109,7 @@ module Chirp
     #
     # Returns an Array of image URLs
     def picture_array
-      @sci_name_list = scientific_name_list
+      @sci_name_list = name_list("sciName")
       @pic_array = []
       @sci_name_list.each do |bird|
         url = get_pic_url(bird)
@@ -125,6 +129,39 @@ module Chirp
       end
       puts "The @list is #{list.length} long."
       return @list
+    end 
+
+    def add_wiki_to_template
+      @info_list= info_array
+      @list.each_with_index do |bird, index|
+        info = @info_list[index]
+        @list[index]["info"] = info
+      end
+      puts "The @list is #{list.length} long."
+      return @list
+    end 
+
+    def info_array
+      @com_name_list = name_list("comName")
+      @info_array = []
+      @com_name_list.each do |bird|
+        info = get_wiki(bird)
+        @info_array << info
+      end
+    end
+
+    def get_wiki(name)
+      extract = Wikipedia.find(name, :prop => "extracts").json
+      extract = JSON.parse(extract)
+      extract =extract["query"]
+      markup = {}
+      extract.each do |key, pages|
+        pages.each do |key, num|
+          num.each do |key, info|
+            markup = info
+          end
+        end
+      end
     end
   end
 end

@@ -13,7 +13,8 @@ get '/' do
 end
 
 get '/birdlist' do
-    @lat_lng = cookies[:lat_lng].split("|")
+    #@lat_lng = cookies[:lat_lng].split("|")
+    @lat_lng = [30.267153, -97.743061]
     @loc = Chirp::Location.new(@lat_lng)
     # Gets list of birds in JSON format from Cornnell, transforms into a Ruby object.
     @birds = @loc.get_list
