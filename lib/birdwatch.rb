@@ -65,6 +65,7 @@ module Chirp
         sci_name = bird["sciName"]
         @sci_name_list << sci_name
       end
+      puts "The @sci_name_list is #{@sci_name_list.length} long."
       return @sci_name_list
     end
 
@@ -85,6 +86,7 @@ module Chirp
         :per_page => 1,
         :extras => 'url_q'
       )
+      puts "flicker_call complete"
       return picture[0]
     end
 
@@ -109,6 +111,7 @@ module Chirp
         url = get_pic_url(bird)
         @pic_array << url
       end
+      puts "The picture array is #{@pic_array.length} long."
       return @pic_array
     end
 
@@ -120,6 +123,7 @@ module Chirp
         url = @pic_urls[index]
         @list[index]["img_url"] = url
       end
+      puts "The @list is #{list.length} long."
       return @list
     end
   end
