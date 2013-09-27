@@ -1055,7 +1055,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: 'Gentium Book Basic', serif;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.6;
@@ -1069,7 +1069,8 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
-  font-family:'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
+  
   
   /*font-weight: bold;*/
   font-style: normal;
@@ -1317,7 +1318,7 @@ button, .button {
 /*  border-style: solid;
   border-width: 1px;*/
   cursor: pointer;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
   line-height: 1;
  /* - - - CUSTOM OVERRIDE - - - */
@@ -1327,10 +1328,10 @@ button, .button {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding-top: 0.75em;
+/*  padding-top: 0.75em;
   padding-right: 1.5em;
   padding-bottom: 0.8125em;
-  padding-left: 1.5em;
+  padding-left: 1.5em;*/
   font-size: 1em;
   background-color: #2ba6cb;
   /*border-color: #2284a1;*/
@@ -1371,10 +1372,10 @@ button, .button {
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: white; }
   button.large, .button.large {
-    padding-top: 1em;
+/*    padding-top: 1em;
     padding-right: 2em;
     padding-bottom: 1.0625em;
-    padding-left: 2em;
+    padding-left: 2em;*/
     font-size: 1.25em; }
   button.small, .button.small {
     padding-top: 0.5625em;

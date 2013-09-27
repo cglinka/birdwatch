@@ -112,6 +112,7 @@ module Chirp
         @pic_array << url
       end
       puts "The picture array is #{@pic_array.length} long."
+      pp @pic_array
       return @pic_array
     end
 

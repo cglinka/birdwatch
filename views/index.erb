@@ -5,8 +5,8 @@
 			<title>chirpasana</title>
   		<link rel="stylesheet" href="application.css">
   		<link rel="stylesheet" href="foundation.css">
-  		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-  		<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 
   		<script src="js/vendor/custom.modernizr.js"></script>
 
@@ -19,100 +19,82 @@
 			<script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
 		</head>
 
-		<body>
+		<body class="home">
+
+
+<div class ="row">
+	<div class="large-12 columns">
+		<div class="locate-me">
+			<a href="#" id="locate-butt" class="large button">press to get started</a>
+		</div>
+	</div>
+</div>
+
+
+
 
 <!-- - - - - - - - - - - - - - - NAV BAR - - - - - - - - - - - - - - - - -->
 <!-- 										         PENDING 																 -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
-			<div class="brand-bar">
+			<div class ="container-home">
+			<!-- - - - - - - Lat & Long - - - - - - - - -->
 				<div class="row">
-					<div class="large-3 columns">
-						<h2>chirp chirp</h2>
-						<hr />
-					</div>
-
-					<div class="large-9 columns">
-						<h2>let's find some real tweets</h2>
-						<hr />
-					</div>
-				</div>
-			</div>
-
-		<!-- - - - - - - Lat & Long - - - - - - - - -->
-
-			<div class="row">
-
-				<!-- Nested columns for lat + long -->
-				<div class="large-12 columns">
-					<div class="lat-long-container">
-
-						<!-- - - - - - locate me button - - - - - -->
-						<div class="large-3 columns">
-							<div class="locate-me">
-								<a href="#" id="locate-butt" class="large button">press me to get started</a>
-							</div>
-						</div>
-
-						<!-- - - - - - latitude - - - - - - -->
-						<div class="large-4 columns">
-							<div class="latitude">
-								<div class="latitude-text">
-									<h4>latitude: </h4>
-								</div>
-
-								<div class="latitude-calc">
-									<h4></h4>
-								</div>
-							</div>
-						</div>
-
-						<!-- - - - - - longitude - - - - - - -->
-						<div class="large-5 columns">
-							<div class="longitude">
-								<div class="longitude-text">
-									<h4>longitude: </h4>
-								</div>
-
-								<div class="longitude-calc">
-									<h4></h4>
-								</div>
-							</div>
-						</div>
-					</div> <!-- - class lat long container -->
-				</div>	<!-- - close large 9 columns -->
-			</div>
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-
-		<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - - - - - -  -->
-
-			<div class="row">
-				<div class="footer">
+					<!-- Nested columns for lat + long -->
 					<div class="large-12 columns">
-					</div>
-				</div>
-			</div>
+						<div class="lat-long-container">
+							<!-- - - - - - latitude - - - - - - -->
+							<div class="large-6 columns">
+								<div class="latitude">
+									<div class="latitude-text">
+										<h4>latitude: </h4>
+									</div>
+								</div>
+							</div>
 
-		<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - - - - - -  -->
-		  <script>
-			  document.write('<script src=' +
-			  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-			  '.js><\/script>')
-		  </script>
-		  <script src="js/foundation.min.js"></script>
-		  <script>$(document).foundation();</script>
-		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-		  <!-- <script src="readmore.js"></script> 
-		  <script>$('article').readmore({maxHeight: 100});</script> -->
-			<script type="text/javascript">
-			  // Change underscore template interprolation
-			  // syntax from <%= %> to {{ }}
-			  _.templateSettings = {
-			    interpolate: /\{\{(.+?)\}\}/g
-			  };
-			</script>
-			<script type="text/javascript" src="geo.js"></script>
+							<!-- - - - - - longitude - - - - - - -->
+							<div class="large-6 columns">
+								<div class="longitude">
+
+									<div class="longitude-text">
+										<h4>longitude: </h4>
+									</div>
+								</div>
+							</div>
+						</div> <!-- - class lat long container -->
+					</div>	<!-- - close large 12 columns -->
+				</div>
+
+	
+			<!-- - - - - - - - - - - - - - - Footer Div - - - - - - - - - - -  -->
+
+				<!-- <div class="row">
+					<div class="footer">
+						<div class="large-12 columns">
+						</div>
+					</div>
+				</div> -->
+
+			<!-- - - - - - - - - - - - - - - - - END  - - - - - - - - - - - -  -->
+			  <script>
+				  document.write('<script src=' +
+				  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+				  '.js><\/script>')
+			  </script>
+			  <script src="js/foundation.min.js"></script>
+			  <script>$(document).foundation();</script>
+			  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+			  <!-- <script src="readmore.js"></script> 
+			  <script>$('article').readmore({maxHeight: 100});</script> -->
+				<script type="text/javascript">
+				  // Change underscore template interprolation
+				  // syntax from <%= %> to {{ }}
+				  _.templateSettings = {
+				    interpolate: /\{\{(.+?)\}\}/g
+				  };
+				</script>
+				<script type="text/javascript" src="geo.js"></script>
+			</div>
 		</body>
 	</html>
