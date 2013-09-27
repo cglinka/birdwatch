@@ -6,8 +6,9 @@
 
      <link rel="stylesheet" href="application.css">
      <link rel="stylesheet" href="foundation.css">
-     <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+
 
      <script src="js/vendor/custom.modernizr.js"></script>
 
@@ -19,7 +20,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
     <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
     <script type="text/javascript">
-      window.birds = <%= @birds_json %>;
+       window.birds = <%= @birds_json %>;
+     
+
+
     </script>
 
   </head>
@@ -33,71 +37,59 @@
 
   <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
   <div class="brand-bar">
-  <div class="row">
-  <div class="large-3 columns">
-  <h2>chirp chirp</h2>
-  <hr />
+    <div class="row">
+      <div class="large-3 columns">
+        <h2>chirp chirp</h2>
+        <hr />
+      </div>
+
+      <div class="large-9 columns">
+        <h2>our main header image</h2>
+        <hr />
+      </div>
+    </div>
   </div>
 
-  <div class="large-9 columns">
-  <h2>our main header image</h2>
-  <hr />
-  </div>
-  </div>
-  </div>
 
-
-
-
-
-  <!-- - - - - - - - - - search me button - - - - - - - - -->
-
-  <div class="row">
-  <div class="large-12 columns">
-  <div class="locate-me">
-  <!-- <button id="locate-butt">press me to get started</button> -->
-  </div>
-  </div>
-  </div>
 
   <!-- - - - - - - Lat & Long - - - - - - - - -->
 
   <div class="row">
-
-
+    <div class="large-3 columns">
+    </div>
   <!-- Nested columns for lat + long -->
-  <div class="large-12 columns">
-  <div class="lat-long-container">
+    <div class="large-9 columns">
+      <div class="lat-long-container">
 
-  <!-- - - - - - latitude - - - - - - -->
-  <div class="large-6 columns">
-  <div class="latitude">
-  <div id="latitude-text">
-  <h4>latitude: </h4>
-  </div>
+      <!-- - - - - - latitude - - - - - - -->
+        <div class="large-6 columns">
+          <div class="latitude">
+            <div id="latitude-text">
+            <h4>latitude: </h4>
+            </div>
 
-  <div class="latitude-calc">
-  <h4><%= @lat %></h4>
-  </div>
+            <div class="latitude-calc">
+            <h4><%= @loc.lat %></h4>
+            </div>
 
-  </div>
-  </div>
+          </div>
+        </div>
 
-  <!-- - - - - - longitude - - - - - - -->
-  <div class="large-6 columns">
-  <div class="longitude">
-  <div id="longitude-text">
-  <h4>longitude: </h4>
-  </div>
+      <!-- - - - - - longitude - - - - - - -->
+        <div class="large-6 columns">
+          <div class="longitude">
+            <div id="longitude-text">
+              <h4>longitude: </h4>
+            </div>
 
-  <div class="longitude-calc">
-  <h4><%= @long %></h4>
-  </div>
-  </div>
-  </div>
+            <div class="longitude-calc">
+              <h4><%= @loc.long %></h4>
+            </div>
+          </div>
+        </div>
 
-  </div> <!-- - class lat long container -->
-  </div>	<!-- - close large 9 columns -->
+      </div> <!-- - class lat long container -->
+    </div>	<!-- - close large 9 columns -->
   </div>
 
 
@@ -128,7 +120,7 @@
   										</div>
 
   										<div class="large-6 columns">
-  											<div class="scientific name">
+  											<div class="scientific-name">
   												<p>{{sciName}}</p>
   											</div>
   										</div>
