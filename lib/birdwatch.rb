@@ -30,6 +30,7 @@ module Chirp
         @birdie ={"comName"=> bird["comName"], "sciName"=> bird["sciName"]}
         template << @birdie
       end
+      puts "lat: #{@lat}   long: #{@long}"
       template
     end
 

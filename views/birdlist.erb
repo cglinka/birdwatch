@@ -20,39 +20,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
     <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
     <script type="text/javascript">
-      // window.birds = <%= @birds_json %>;
-      window.birds = [
-          {
-              "comName": "Chimney Swift",
-              "sciName": "Chaetura pelagica",
-              "img_url": "http://farm4.staticflickr.com/3094/3910530658_d31cdcc2ab_q.jpg"
-          },
-          {
-              "comName": "Common Nighthawk",
-              "sciName": "Chordeiles minor",
-              "img_url": "http://farm4.staticflickr.com/3582/3656997399_33e1012137_q.jpg"
-          },
-          {
-              "comName": "White-winged Dove",
-              "sciName": "Zenaida asiatica",
-              "img_url": "http://farm4.staticflickr.com/3488/4551631969_58e67f959b_q.jpg"
-          },
-          {
-              "comName": "House Finch",
-              "sciName": "Haemorhous mexicanus",
-              "img_url": "http://farm6.staticflickr.com/5531/9445720889_bda8b7e50d_q.jpg"
-          },
-          {
-              "comName": "Mourning Dove",
-              "sciName": "Zenaida macroura",
-              "img_url": "http://farm4.staticflickr.com/3753/9371892643_11d54ccb6d_q.jpg"
-          },
-          {
-              "comName": "Great-tailed Grackle",
-              "sciName": "Quiscalus mexicanus",
-              "img_url": "http://farm8.staticflickr.com/7116/7567934258_31125a5575_q.jpg"
-          }
-      ]
+       window.birds = <%= @birds_json %>;
+     
 
 
     </script>
@@ -100,7 +69,7 @@
             </div>
 
             <div class="latitude-calc">
-            <h4><%= @lat %></h4>
+            <h4><%= @loc.lat %></h4>
             </div>
 
           </div>
@@ -114,7 +83,7 @@
             </div>
 
             <div class="longitude-calc">
-              <h4><%= @long %></h4>
+              <h4><%= @loc.long %></h4>
             </div>
           </div>
         </div>
