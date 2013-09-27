@@ -4,6 +4,7 @@ require 'pry'
 require 'bundler/setup'
 require 'rubygems'
 require 'flickraw'
+require 'wikipedia'
 
 module Chirp
   class Location
@@ -116,8 +117,6 @@ module Chirp
         url = get_pic_url(bird)
         @pic_array << url
       end
-      puts "The picture array is #{@pic_array.length} long."
-      pp @pic_array
       return @pic_array
     end
 
@@ -129,7 +128,6 @@ module Chirp
         url = @pic_urls[index]
         @list[index]["img_url"] = url
       end
-      puts "The @list is #{list.length} long."
       return @list
     end 
 
@@ -139,7 +137,7 @@ module Chirp
         info = @info_list[index]
         @list[index]["info"] = info
       end
-      puts "The @list is #{list.length} long."
+      # puts "The @list is #{list.length} long."
       return @list
     end 
 
@@ -147,9 +145,10 @@ module Chirp
       @com_name_list = name_list("comName")
       @info_array = []
       @com_name_list.each do |bird|
-        info = get_wiki(bird)
-        @info_array << info
+        @info = get_wiki(bird)
+        @info_array << @info
       end
+      @info_array
     end
 
     def get_wiki(name)
@@ -164,6 +163,7 @@ module Chirp
           end
         end
       end
+      markup
     end
   end
 end

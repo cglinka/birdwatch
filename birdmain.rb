@@ -25,9 +25,27 @@ get '/birdlist' do
     # Takes list of bird names and feeds it into the Content class
     @content = Chirp::Content.new(@birds)
     # # Appends image URL's to each Hash object in the @content Array.
-    @content = @content.add_to_template
+    #@content_array = @content.add_to_template
     # # Turn ruby object back into JSON.
-    @birds_json = @content.map { |o| Hash[o.each_pair.to_a] }.to_json
+    @content_array = [
+    {
+        "comName" => "Yellow-crowned Night-Heron",
+        "sciName" => "Nyctanassa violacea",
+        "img_src" => "http://farm3.staticflickr.com/2453/4034562092_66c80760dc.jpg"
+    },
+    {
+        "comName" => "White-winged Dove",
+        "sciName" => "Zenaida asiatica",
+        "img_src" => "http://farm8.staticflickr.com/7091/7338226784_acb7f13611.jpg"
+    },
+    {
+        "comName" => "Rock Pigeon",
+        "sciName" => "Columba livia",
+        "img_src" => "http://farm4.staticflickr.com/3023/2367694753_cb4a50b22f.jpg"
+    }]
+    @content_array = @content.add_wiki_to_template
+    puts @content_array
+    @birds_json = @content_array.map { |o| Hash[o.each_pair.to_a] }.to_json
 
     erb:birdlist
 end
