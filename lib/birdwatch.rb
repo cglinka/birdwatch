@@ -94,10 +94,19 @@ module Chirp
     # Takes a Hash object as arguemnt and isolates the picture URL.
     #
     # Returns URL of most interesting image that is associated with text that matches the scientific name.
+    # if flickr sucks, put in a placeholder image
     def get_pic_url(name)
+
       picture = flickr_call(name)
-      url = picture["url_q"]
+
+      if picture.nil?
+        url= "bird_generic_BW.jpg"
+      else
+        url = picture["url_q"]
+      end
+      
       return url
+
     end
 
     # Puts the picture URL's into an array
