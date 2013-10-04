@@ -24,6 +24,7 @@ Line 1476 box shadow override
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 
+
 p {
   color: white;
 }
@@ -113,13 +114,26 @@ p {
   border-style: solid;
   border-color: white;
   margin-top: 10%;
-
-
- 
-
 }
 
 
 
+.footer { 
+  float:none;
+}
+
+ ul {
+  list-style-type: none
+}
+
+
+.contributers img {
+  height:50px;
+  width:50px;
+}
+
+#flickr {
+height: 30px;
+}
 
 /* - - - - - - - ChirpAsana Section specific styling END - - - - - - - - - -*/
