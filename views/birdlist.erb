@@ -17,18 +17,21 @@
       <![endif]-->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
-    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
-    <script type="text/javascript">
-       window.birds = <%= @birds_json %>;
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js">
     </script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js">
+    </script>
+    <script type="text/javascript">
+      window.birds = <%= @birds_json %>;
+    </script>
+
   </head>
   <body>
     <!-- - - - - - - - - - - - - - - ROW 1 Brand Bar Row - - - - - - - - - - -->
     <div class="brand-bar">
       <div class="row">
         <div class="large-3 columns">
-          <h2>chirp chirp</h2>
+          <a href="/"><h2>chirp chirp</h2></a>
           <hr />
         </div>
         <div class="large-9 columns">
@@ -73,31 +76,25 @@
 				<script class="birdTemplate" type="text/template">
 				    <div class="row">
 						<div class="search-results">
-
-							<div class="large-3 columns">
+							<div class="large-3 small-12 columns">
 								<div class="search-image">
                   <img src={{img_url}} />
 								</div>
 							</div>
-
 							<div class="large-9 columns">
 								<section id="bird-description">
-
-
 									<div class="row">
-										<div class="large-6 columns">
+										<div class="large-6 small-12 columns">
 											<div class="common-name">
 												<p>{{comName}}</p>
 											</div>
 										</div>
-
-										<div class="large-6 columns">
+										<div class="large-6 small-12 columns">
 											<div class="scientific-name">
 												<p>{{sciName}}</p>
 											</div>
 										</div>
 									</div>
-
 									<article class="slide">
 									</article>
 								</section>
