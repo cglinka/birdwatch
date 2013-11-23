@@ -17,6 +17,7 @@ get '/birdlist' do
     @loc = Chirp::Location.new(@lat_lng)
     # Gets list of birds in JSON format from Cornnell, transforms into a Ruby object.
     @birds = @loc.get_list
+    pp @birds
     # Temp command to use only Cornell data to populate /birdlist
     # @birds_json = @birds.map { |o| Hash[o.each_pair.to_a] }.to_json
 

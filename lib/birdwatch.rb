@@ -3,7 +3,8 @@ require 'rest_client'
 require 'pry'
 require 'bundler/setup'
 require 'rubygems'
-require 'flickraw'
+# require 'flickraw'
+require 'wikiwhat'
 
 module Chirp
   class Location
@@ -27,8 +28,9 @@ module Chirp
       @list = JSON.parse(@list)
       template= []
       @list.each do |bird|
-        @birdie ={"comName"=> bird["comName"], "sciName"=> bird["sciName"]}
-        template << @birdie
+        scientific = bird["sciName"].split(" ")[0..1].join(" ")
+        birdie ={"comName"=> bird["comName"], "sciName"=> scientific}
+        template << birdie
       end
       puts "lat: #{@lat}   long: #{@long}"
       template
@@ -73,40 +75,40 @@ module Chirp
     # Flickr search: take scientific name and search flickr
     #
     # Returns a Ruby Hash object.
-    def flickr_call(name)
+    # def flickr_call(name)
 
-      FlickRaw.api_key =ENV['API_KEY']
-      FlickRaw.shared_secret =ENV['SHARED_SECRET']
+    #   FlickRaw.api_key =ENV['API_KEY']
+    #   FlickRaw.shared_secret =ENV['SHARED_SECRET']
 
-      picture = flickr.photos.search(
-        :text => name,
-        :sort => 'interestingness-desc',
-        :safe_search => 1,
-        :format => 'json',
-        :nojsoncallback => 1,
-        :per_page => 1,
-        :extras => 'url_q'
-      )
-      puts "flicker_call complete"
-      return picture[0]
-    end
+    #   picture = flickr.photos.search(
+    #     :text => name,
+    #     :sort => 'interestingness-desc',
+    #     :safe_search => 1,
+    #     :format => 'json',
+    #     :nojsoncallback => 1,
+    #     :per_page => 1,
+    #     :extras => 'url_q'
+    #   )
+    #   puts "flicker_call complete"
+    #   return picture[0]
+    # end
 
     # Takes a Hash object as arguemnt and isolates the picture URL.
     #
     # Returns URL of most interesting image that is associated with text that matches the scientific name.
     # if flickr sucks, put in a placeholder image
     def get_pic_url(name)
-
-      picture = flickr_call(name)
+      puts "getting #{name} sidebar image..."
+      bird = Wikiwhat::Page.new(name)
+      picture = bird.sidebar_image
 
       if picture.nil?
         url= "bird_generic_BW.jpg"
       else
-        url = picture["url_q"]
+        url = picture
       end
-      
-      return url
 
+      return url
     end
 
     # Puts the picture URL's into an array
@@ -123,7 +125,7 @@ module Chirp
       end
       puts "The picture array is #{@pic_array.length} long."
       pp @pic_array
-      return @pic_array
+      return pic_array
     end
 
     # Combines the image URLs with the @list Array from birdmain.rb

@@ -1,3 +1,10 @@
+PATH
+  remote: ../
+  specs:
+    wikiwhat (0.0.3)
+      json
+      rest-client
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,3 +66,4 @@ DEPENDENCIES
   rspec
   sinatra
   sinatra-contrib
+  wikiwhat!
